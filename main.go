@@ -47,5 +47,6 @@ func main() {
 	e.GET("/hello", func(e echo.Context) error {
 		return e.JSON(http.StatusOK,"world")
 	})
+
 	e.Logger.Fatal(e.Start(":3000"))
 }
