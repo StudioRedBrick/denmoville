@@ -34,9 +34,9 @@ func main() {
 		switch payload.(type) {
 
 		case github.PushPayload:
-			pushPayload := payload.(github.PushPayload)
+			// pushPayload := payload.(github.PushPayload)
 			// Do whatever you want from here...
-			fmt.Printf("%+v", pushPayload)
+			// fmt.Printf("%+v", pushPayload)
 			cmd := exec.Command("./git_pull.sh")
 			cmd.Run()
 		}
