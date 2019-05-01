@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- own css -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+    
+<style>
+    /*turn off mobile header and side nav*/
+    .header_m{display:none;}
+    
+    /*css*/
+    .header{height:100px; background:rgba(0,0,0,0.5);}
+    .header li{margin-top:38px; color:#fff; font-size:20px; font-weight:600; letter-spacing:-0.5px; cursor:pointer; opacity:0.8; height:24px;}
+    .header li:hover{opacity:1;}
+    .header li.menu{float:right;}
+    .header li.logo{float:left; width:196px; background:blue;}
+    .header .add_margin{margin-right:40px;}
+    .header:after{content:""; display:block; clear:both;}/*clearfix*/
+    
+    /*detail media query*/
+    @media screen and (max-width:1024px){
+    }
+    
+    @media screen and (max-width:768px){
+        /*turn off pc header*/
+        .header{display:none;}
+        /*turn on mobile header and side nav*/
+        .header_m{display:block; position:relative; height:100px; width:100%; background:rgba(0,0,0,0.2);}
+        
+        .header_m .ham_icon{width:36px; height:36px; background:rgba(255,0,0,0.4); padding:32px 0;}
+        .header_m .ham_icon img{width:36px; height:36px;}
+        .header_m .side_nav{display:none; width:100vw; height:100vh; background:rgba(0,0,0,0.7);}
+    }
+    
+    @media screen and (max-width:320px){
+        .header_m{height:60px;}
+        .header_m .ham_icon{padding:12px 0;}
+    }
+    
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="header">
+            <li class="logo">logo</li>
+            <li class="menu">About</li>
+            <li class="menu add_margin">Material</li>
+            <li class="menu add_margin">Product</li>
+        </ul>
+        <div class="header_m">
+            <div class="ham_icon"><img src="img/favicon.png"></div>
+            <ul class="side_nav">
+                <li>side nav</li>
+                <li>side nav</li>
+                <li>side nav</li>
+            </ul>
+        </div>
+    </div>
+</body>
+    
+</html>
