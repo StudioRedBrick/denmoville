@@ -13,11 +13,13 @@
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
     <!--css-->
+    <link rel="stylesheet" type="text/css" href="./css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <!--js-->
     <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery-ui.js"></script>
-    <script type="text/javascript" src="./js/test.js"></script>
+    <script type="text/javascript" src="./js/vendor/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </head>
 
 <script>
@@ -48,23 +50,77 @@
         }
       }
     };
+    
+    function checkBanner(){
+        //highlighting banner title
+        window.setInterval(function(){
+
+            var target = $(".flexslider .flex-control-nav").find('.flex-active').text();
+            var value = parseInt(target);
+            //console.log(value);
+            
+            //turn down all banner title opacity
+            $(".flexslider .banner_title p").css({"color":"rgba(255,255,255,0.5)"});
+            //turn up selected title opacity
+            $(".flexslider .banner_title p:nth-child("+value+")").css({"color":"rgba(255,255,255,1)"});
+            
+            if(window.matchMedia("(max-width:320px)").matches){
+                //turn down all banner title opacity
+                $(".flexslider .banner_title p").css({"display":"none"});
+                //turn up selected title opacity
+                $(".flexslider .banner_title p:nth-child("+value+")").css({"display":"block"});    
+            }
+            
+        }, 100);
+    }
 </script>
 
 <style>
-    .banner{width:100%; padding:0 100px; height:300px; margin:0 auto; background-image:url(./img/banner.jpg); background-repeat:no-repeat; background-size:cover; margin-top:-100px;}
+    body{position:relative;}
+    .positioning{width:100%; height:100px; position:absolute; top:0; left:0; z-index:9998;}
+    .flexslider .banner_title{width:1240px; position:absolute; left:50%; bottom:60px; margin-left:-620px; z-index:1;}
+    .flexslider .banner_title p{width:33.3333%; float:left; text-align:center; font-size:16px; font-weight:normal; color:rgba(255,255,255,0.5); display:block;}
+    .flexslider .banner_title p span{font-weight:600; padding-right:10px;}
+    .flexslider .banner_title:after{content:""; display:block; clear:both;}/*clearfix*/
+    
+    /*detail media query*/
+    @media screen and (max-width:1024px){
+        .flexslider .banner_title{width:904px; margin-left:-452px;}
+    }
+    
+    @media screen and (max-width:768px){
+        .flexslider .banner_title{width:708px; margin-left:-354px;}
+    }
     
     @media screen and (max-width:320px){
-        .banner{padding:0;}
-        
+        .flexslider .banner_title{width:100%; left:0; margin-left:0px;}
+        .flexslider .banner_title p{width:100%; display:none;}
     }
     
 </style>
     
 <body>
     
-    <div include-html="header.html"></div>
-    
-    <div class="banner"></div>
+    <div include-html="header.html" class="positioning"></div>
+
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="./img/banner1.jpg"/>
+            </li>
+            <li>
+                <img src="./img/banner2.jpg"/>
+            </li>
+            <li>
+                <img src="./img/banner3.jpg"/>
+            </li>
+        </ul>
+        <div class="banner_title">
+            <p><span>01</span>타미 아쿠아 클린 소파</p>
+            <p><span>02</span>타미 아쿠아 클린 소파</p>
+            <p><span>03</span>타미 아쿠아 클린 소파</p>
+        </div>
+    </div>
     
     <div class="wrap">
         <div>section 1</div>
@@ -78,6 +134,7 @@
     <div include-html="footer.html"></div>
     
     <script>
+        checkBanner();
         includeHTML();
     </script>
     
