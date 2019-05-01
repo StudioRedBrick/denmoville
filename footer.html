@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- own css -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+    
+<style>
+    .footer{background:rgba(0,0,0,0.1);}
+    .footer ul{padding:80px 0 60px 0; float:left;}
+    .footer ul li{float:left; cursor:pointer; font-size:20px; color:#646464;}
+    
+    .footer .menu{background:rgba(0,0,0,0.2);}
+    .footer .menu .logo{width:210px; height:24px; margin:0 80px 0 0; background:blue;}
+    .footer .menu .add_margin{margin-right:40px;}
+    
+    .footer .sns{float:right; background:rgba(0,0,0,0.2);}
+    .footer .sns li{padding:0 20px; border-left:1px solid #e6e6e6;}
+    .footer .sns li:nth-child(1){border-left:none;}
+    .footer .sns li:nth-child(3){padding:0 0 0 20px;}
+    
+    .footer .copyright{width:100%; float:left; padding:21px 0; text-align:center; border-top:1px solid #e6e6e6; font-size:14px; font-weight:500; color:#969696;}
+    
+    .footer:after{content:""; display:block; clear:both;}/*clearfix*/
+
+    /*detail media query*/
+    @media screen and (max-width:1024px){
+    }
+    
+    @media screen and (max-width:768px){
+        .footer ul{padding:0; float:none; width:100%;}
+        .footer ul li{float:none;}
+        
+        .footer .menu{padding:60px 0 40px 0;}
+        .footer .menu li{text-align:center; margin:28px 0 0 0;}
+        .footer .menu li:nth-child(2){margin:0;}
+        .footer .menu .logo{margin:0 auto 40px auto;}
+        .footer .menu .add_margin{margin-right:0px;}
+        
+        .footer .sns{width:247px; float:none; margin:0 auto 40px auto; background:red;}
+        .footer .sns li{float:left;}
+        
+        .footer .sns:after{content:""; display:block; clear:both;}/*clearfix*/
+    }
+    
+    @media screen and (max-width:320px){
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="footer">
+            <ul class="menu">
+                <li class="logo">logo</li>
+                <li class="add_margin">About</li>
+                <li class="add_margin">Material</li>
+                <li>Product</li>
+            </ul>
+            <ul class="sns">
+                <li>face</li>
+                <li>inst</li>
+                <li>blog</li>
+            </ul>
+            <div class="copyright">&copy; Den Mobili. ALL RIGHTS RESERVED</div>
+        </div>
+    </div>
+</body>
+    
+</html>

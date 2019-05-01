@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/*reset*/
+    *{margin:0; padding:0; font-family:Montserrat; hyphens:none; word-break:keep-all;}
+    html{overflow-x:hidden;}
+    body{margin:0; padding:0;}
+    a{text-decoration:none;}
+    ul, li{list-style:none;}
+    p, span, h1, h2, h3{margin:0; padding:0;}
+    /*reset end*/
+    
+    .wrap{width:1240px; background:rgba(0,0,0,0.2); padding:0 100px; margin:0 auto;}
+    
+    /*media query*/
+    @media screen and (max-width:1024px){body{background:#00a7ff;}.wrap{width:904px; padding:0 60px;}}
+    @media screen and (max-width:768px){body{background:#7773db;}.wrap{width:708px; padding:0 30px;}}
+    @media screen and (max-width:320px){body{background:#0080ff;}.wrap{width:87.5%; padding:0;}}
+    
+    /*---------------------------------------------------------------*/

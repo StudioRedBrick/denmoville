@@ -1,4 +1,86 @@
-<html><body><h1>It works!</h1>
-<p>This is the default web page for this server.</p>
-<p>The web server software is running but no content has been added, yet.</p>
-</body></html>
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X_UA-compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>덴모빌리</title>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!--js-->
+    <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/vendor/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/test.js"></script>
+</head>
+
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+</script>
+
+<style>
+    .banner{width:100%; padding:0 100px; height:300px; margin:0 auto; background-image:url(./img/banner.jpg); background-repeat:no-repeat; background-size:cover; margin-top:-100px;}
+    
+    @media screen and (max-width:320px){
+        .banner{padding:0;}
+        
+    }
+    
+</style>
+    
+<body>
+    
+    <div include-html="header.html"></div>
+    
+    <div class="banner"></div>
+    
+    <div class="wrap">
+        <div>section 1</div>
+        <div>section 2</div>
+        <div>section 3</div>
+        <div>section 4</div>
+    </div>
+    
+    <!--insert ribbon.html-->
+    
+    <div include-html="footer.html"></div>
+    
+    <script>
+        includeHTML();
+    </script>
+    
+</body>
+    
+</html>
