@@ -10,7 +10,7 @@ $(document).ready(function(){
         maxItems: 1,
         animationDuration: 500,
         move:1,
-        slideshowSpeed:1000,
+        slideshowSpeed:7000,
         controlNav:true,
         directionNav:false,
     });
