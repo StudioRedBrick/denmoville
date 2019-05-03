@@ -208,6 +208,7 @@ html[xmlns] .flexslider .slides {
 .flex-control-nav {
     background:rgba(255,255,255,0.3);
   width: 1240px;
+    height:2px;
   position: absolute;
   bottom: 40px;
     left:50%;
@@ -215,25 +216,22 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-nav li {
-  display: block;
     width:155px;
-  zoom: 1;
-  /**display: inline;*/
-    float:left;
-    position:relative;
+    zoom: 1;
+    *display: inline;
+    position:absolute;
+    left:0; top:0;
 }
 
 .flex-control-nav li:nth-child(2){
-    float:left;
-    left:37.6%;
+    left:50%;
     margin-left:-77.5px;
 }
 
 .flex-control-nav li:nth-child(3){
-    float:right;
+    left:100%;
+    margin-left:-155px;
 }
-
-.flex-control-nav:after{content:""; display:block; clear:both}/*clearfix*/
 
 .flex-control-paging li a {
   width: 155px;
@@ -297,19 +295,18 @@ html[xmlns] .flexslider .slides {
 /*detail media query*/
 @media screen and (max-width:1024px){
     .flex-control-nav {width:904px; margin-left:-452px;}
-    .flex-control-nav li:nth-child(2){left:33%;}
 }
 @media screen and (max-width:768px){
     .flexslider .slides img{height:100vh; width:200%;/*width:213.335%로하면 디자인 된 수치로 height 설정됩니다.*/}
     .flex-control-nav {width:708px; margin-left:-354px;}
-    .flex-control-nav li:nth-child(2){left:28%;}
 }
 @media screen and (max-width:415px){
     .flexslider .slides img{height:100vh; width:400%;}
     .flex-control-nav {width:87.5%; margin-left:-43.25%;}
     .flex-control-nav li {width:33.3333%;}
-    .flex-control-nav li:nth-child(2){left:27.7%;}
     .flex-control-paging li a{width:100%;}
+    .flex-control-nav li:nth-child(2){margin-left:-16.6666%;}
+    .flex-control-nav li:nth-child(3){margin-left:-33.3333%;}
 }
 @media screen and (min-width:1441px){
     .flex-viewport{height:900px;}
