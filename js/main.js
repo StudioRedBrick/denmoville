@@ -71,7 +71,7 @@ function gnbCss(){
 function hamMenu(){
     
     //open hamburger menu
-    $(".gnb_wrap .header_m .ham_icon").on('click', function(){
+    $(".gnb_wrap .header_m .ham_icon").on('click touchstart', function(){
         $(".ham_wrap").animate({"left":"0"},200,'swing');
     });
     //close hamburger menu
