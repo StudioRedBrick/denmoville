@@ -72,6 +72,7 @@ function hamMenu(){
     
     //open hamburger menu
     $(".gnb_wrap .header_m .ham_icon").on('click touchstart', function(){
+        console.log('jjjjj');
         $(".ham_wrap").animate({"left":"0"},200,'swing');
     });
     //close hamburger menu
