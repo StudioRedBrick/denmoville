@@ -123,14 +123,19 @@
     .wrap .product_wrap li:hover{opacity:1;}
     .wrap .product_wrap li:nth-child(even){float:right;}
     /*product name*/
-    .wrap .product_wrap li p{position:absolute; bottom:-40px; left:0; font-family:NotoSansCJKkr;}
+    .wrap .product_wrap li p{position:absolute; bottom:-44px; left:0; font-family:NotoSansCJKkr; font-size:24px; line-height:24px;}
     .wrap .product_wrap:after{content:""; display:block; clear:both;}/*clearfix*/
     
     /*detail media query*/
     @media screen and (max-width:1024px){
+        body{background-color:red;}
+        .wrap .product_wrap li{width:437px; height:328px;}
     }
     
     @media screen and (max-width:768px){
+        .wrap .product_wrap li{width:48.5%; height:251px;}
+        /*product name*/
+        .wrap .product_wrap li p{bottom:-40px; font-size:20px; line-height:20px;}
     }
     
     @media screen and (max-width:415px){
