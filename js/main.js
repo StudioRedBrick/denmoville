@@ -70,16 +70,16 @@ function gnbCss(){
 
 function hamMenu(){
     
-    var ua = navigator.userAgent;
-    var event = (ua.match(/iPhone/i)) ? 'touchstart' : 'click';
+    //var ua = navigator.userAgent;
+    //var event = (ua.match(/iPhone/i)) ? 'touchstart' : 'click';
 
     //open hamburger menu
-    $(".gnb_wrap .header_m .ham_icon").on('click touchstart', function(){
+    $(".gnb_wrap .header_m .ham_icon").off('click').on('click', function(){
         console.log('jjjjj');
         $(".ham_wrap").animate({"left":"0"},200,'swing');
     });
     //close hamburger menu
-    $(".ham_wrap .ham_header li:nth-child(2)").on('click', function(){
+    $(".ham_wrap .ham_header li:nth-child(2)").off('click').on('click', function(){
         $(".ham_wrap").animate({"left":"-100vw"},200,'swing');
     });
     
