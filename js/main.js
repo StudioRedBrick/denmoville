@@ -89,17 +89,17 @@ function getUrl(){
         img2 = './img/sub_banner2.png',
         img3 = './img/sub_banner3.png';
     
-    if(url == 'http://127.0.0.1:50231/product.html'){
+    if(url == 'http://34.85.120.42/product.html'){
         console.log('product page');
         $(".sub_banner").css({"background-image":"url("+img1+")"});
         $(".sub_banner .txt p").append('Product');
         $(".sub_banner .txt span").append('높은 품질의 재료를 사용하는것, 덴모빌리');
-    }else if(url == 'http://127.0.0.1:50231/material.html'){
+    }else if(url == 'http://34.85.120.42/material.html'){
         console.log('material page');
         $(".sub_banner").css({"background-image":"url("+img2+")"});
         $(".sub_banner .txt p").append('Material');
         $(".sub_banner .txt span").append('높은 품질의 재료를 사용하는것, 덴모빌리');    
-    }else if(url == 'http://127.0.0.1:50231/about.html'){
+    }else if(url == 'http://34.85.120.42/about.html'){
         console.log('about page');
         $(".sub_banner").css({"background-image":"url("+img3+")"});
         $(".sub_banner .txt p").append('About');
