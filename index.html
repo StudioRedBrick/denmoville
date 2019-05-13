@@ -8,16 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <title>덴모빌리</title>
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
     <!--css-->
     <link rel="stylesheet" type="text/css" href="./css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <!--js-->
     <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="./js/vendor/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/vendor/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery.flexslider.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </head>
@@ -52,78 +53,154 @@
     };
     
     function checkBanner(){
-        //highlighting banner title
         window.setInterval(function(){
 
             var target = $(".flexslider .flex-control-nav").find('.flex-active').text();
             var value = parseInt(target);
-            //console.log(value);
             
+            //highlighting banner title
             //turn down all banner title opacity
-            $(".flexslider .banner_title p").css({"color":"rgba(255,255,255,0.5)"});
+            $(".flexslider .banner_title li").css({"color":"rgba(255,255,255,0.5)"});
             //turn up selected title opacity
-            $(".flexslider .banner_title p:nth-child("+value+")").css({"color":"rgba(255,255,255,1)"});
+            $(".flexslider .banner_title li:nth-child("+value+")").css({"color":"rgba(255,255,255,1)"});
             
             if(window.matchMedia("(max-width:415px)").matches){
                 //turn down all banner title opacity
-                $(".flexslider .banner_title p").css({"display":"none"});
+                $(".flexslider .banner_title li").css({"display":"none"});
                 //turn up selected title opacity
-                $(".flexslider .banner_title p:nth-child("+value+")").css({"display":"block"});    
+                $(".flexslider .banner_title li:nth-child("+value+")").css({"display":"block"});    
             }
             
-        }, 100);
+            //banner animation
+            $(".flex-control-nav li a").css({"animation":"none"});
+            
+            if(value == 1){
+                $(".flexslider .slides .image_wrap2 div").css({"animation":"none"});
+                $(".flexslider .slides .image_wrap1 div").css({"animation":"bannerAni 8s ease forwards"});
+                
+                $(".flex-control-nav li:nth-child(1) a").css({"animation":"progressBar 5s forwards"});
+            }else if( value == 2){
+                $(".flexslider .slides .image_wrap3 div").css({"animation":"none"});
+                $(".flexslider .slides .image_wrap2 div").css({"animation":"bannerAni2 8s ease forwards"});
+                
+                $(".flex-control-nav li:nth-child(2) a").css({"animation":"progressBar 5s forwards"});
+            }else if( value == 3){
+                $(".flexslider .slides .image_wrap1 div").css({"animation":"none"});
+                $(".flexslider .slides .image_wrap3 div").css({"animation":"bannerAni 8s ease forwards"});
+                
+                $(".flex-control-nav li:nth-child(3) a").css({"animation":"progressBar 5s forwards"});
+            }else{
+                $(".flexslider .slides .image_wraps div").css({"animation":"none"}); 
+                
+                $(".flex-control-nav li a").css({"animation":"none"});
+            }
+        }, 50);
     }
 </script>
 
 <style>
     body{position:relative;}
-    .positioning{width:100%; height:100px; position:absolute; top:0; left:0; z-index:9998;}
-    .flexslider .banner_title{width:1240px; position:absolute; left:50%; bottom:60px; margin-left:-620px; z-index:1;}
-    .flexslider .banner_title p{width:33.3333%; float:left; text-align:center; font-size:16px; font-weight:normal; color:rgba(255,255,255,0.5); display:block;}
-    .flexslider .banner_title p span{font-weight:600; padding-right:10px;}
+    .positioning{width:100%; height:100px; position:fixed; /*top:0; left:0;*/ z-index:9998;}
+    .flexslider .banner_title{width:1240px; position:absolute; left:50%; bottom:60px; margin-left:-620px; z-index:3;}
+    .flexslider .banner_title li{width:33.3333%; float:left; text-align:center; font-size:16px; font-weight:normal; color:rgba(255,255,255,0.5); display:block; cursor:pointer;}
+    .flexslider .banner_title li span{font-weight:600; padding-right:10px;}
     .flexslider .banner_title:after{content:""; display:block; clear:both;}/*clearfix*/
+    
+    /*insert banner img*/
+    .flexslider .slides li div{width:115%; height:900px; text-indent:-9999px; transform: translateZ(0);}
+    
+    .flexslider .slides .image_wrap1 div{background-image:url(./img/banner1.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(0%);}
+    
+    .flexslider .slides .image_wrap2 div{background-image:url(./img/banner2.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(-1%);}
+    
+    .flexslider .slides .image_wrap3 div{background-image:url(./img/banner3.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(-1%);}
+    
+    /*banner animation*/
+    @keyframes bannerAni{
+        0%{transform:translate(-2%);}
+        100%{transform:translate(0%);}
+    }
+    
+    @keyframes bannerAni2{
+        0%{transform:translate(0%);}
+        100%{transform:translate(-1%);}
+    }
+    
+    @keyframes bannerAni3{
+        0%{transform:translate(-3%);}
+        100%{transform:translate(-2%);}
+    }
+    
+    @keyframes progressBar{
+    0%{width:0%;}
+    100%{width:100%;}
+}
     
     /*detail media query*/
     @media screen and (max-width:1024px){
         .flexslider .banner_title{width:904px; margin-left:-452px;}
+        
+        /*insert banner img*/
+        .flexslider .slides li div{height:768px;}
+        .flexslider .slides .image_wrap1 div{background-position:40% 0;}
+        .flexslider .slides .image_wrap2 div{background-position:35% 0;}
+        .flexslider .slides .image_wrap3 div{background-position:25% 0;}
     }
     
     @media screen and (max-width:768px){
         .flexslider .banner_title{width:708px; margin-left:-354px;}
+        
+        /*insert banner img*/
+        .flexslider .slides li div{height:100vh;}
+        .flexslider .slides .image_wrap1 div{background-position:48% 0;}
+        .flexslider .slides .image_wrap2 div{background-position:17% 0;}
+        .flexslider .slides .image_wrap3 div{background-position:48% 0;}
     }
     
     @media screen and (max-width:415px){
         .flexslider .banner_title{width:100%; left:0; margin-left:0px;}
-        .flexslider .banner_title p{width:100%; display:none;}
+        .flexslider .banner_title li{width:100%; display:none;}
+        
+        /*insert banner img*/
+        .flexslider .slides .image_wrap1 div{background-position:25% 0;}
+        .flexslider .slides .image_wrap2 div{background-position:40% 0;}
+        .flexslider .slides .image_wrap3 div{background-position:40% 0;}
     }
     
 </style>
     
 <body>
-    
     <div include-html="header.html" class="positioning"></div>
 
     <div class="flexslider">
         <ul class="slides">
-            <li>
-                <img src="./img/banner1.jpg"/>
+            <li class="image_wraps image_wrap1">
+                <div>image</div>
             </li>
-            <li>
-                <img src="./img/banner2.jpg"/>
+            <li class="image_wraps image_wrap2">
+                <div>image</div>
             </li>
-            <li>
-                <img src="./img/banner3.jpg"/>
+            <li class="image_wraps image_wrap3">
+                <div>image</div>
             </li>
         </ul>
-        <div class="banner_title">
-            <p><span>01</span>타미 아쿠아 클린 소파</p>
-            <p><span>02</span>타미 아쿠아 클린 소파</p>
-            <p><span>03</span>타미 아쿠아 클린 소파</p>
-        </div>
+        <ul class="banner_title">
+            <li><span>01</span>타미 아쿠아 클린 소파</li>
+            <li><span>02</span>타미 아쿠아 클린 소파</li>
+            <li><span>03</span>타미 아쿠아 클린 소파</li>
+        </ul>
     </div>
     
     <div class="wrap">
-        <div>section 1</div>
+        <div>
+            <h3>Den Mobili</h3>
+            <p>덴모빌리는 수 년간 준비해온 엄격한 품질기준, 그리고 기술 생산 지식을 기반으로 자연을 담은 듯 편안한 세심함이 느껴지는 디자인 가구를 제작 판매하고 있습니다. 우수한 디자인, 최상의 소재와 제조기술을 바탕으로 제작된 프리미엄 가구를 합리적인 가격으로 생산자에서 소비자에게 직접 전달해드립니다.</p>
+            <ul>
+                <li>img1</li>
+                <li>img2</li>
+            </ul>
+            <div>더보기</div>
+        </div>
         <div>section 2</div>
         <div>section 3</div>
         <div>section 4</div>
@@ -136,6 +213,7 @@
     <script>
         checkBanner();
         includeHTML();
+        getUrl();
     </script>
     
 </body>

@@ -280,7 +280,8 @@
             if (watchedEvent === "" || watchedEvent === event.type) {
               var $this = $(this),
                   target = slider.controlNav.index($this);
-
+                
+                //console.log(target);
               if (!$this.hasClass(namespace + 'active')) {
                 slider.direction = (target > slider.currentSlide) ? "next" : "prev";
                 slider.flexAnimate(target, slider.vars.pauseOnAction);
@@ -292,8 +293,29 @@
               watchedEvent = event.type;
             }
             methods.setToClearWatchedEvent();
-
           });
+            
+            //subin edit
+            $(".flexslider .banner_title li").on('click', function(event) {
+            event.preventDefault();
+
+                if (watchedEvent === "" || watchedEvent === event.type) {
+                  var $this = $(this),
+                      target = slider.controlNav.index($this),
+                    testing = $(this).index();
+
+                  if (!$this.hasClass(namespace + 'active')) {
+                    slider.direction = (testing > slider.currentSlide) ? "next" : "prev";
+                    slider.flexAnimate(testing, slider.vars.pauseOnAction);
+                  }
+                }
+                
+                // setup flags to prevent event duplication
+                if (watchedEvent === "") {
+                  watchedEvent = event.type;
+                }
+                methods.setToClearWatchedEvent();
+            });
         },
         setupManual: function() {
           slider.controlNav = slider.manualControls;

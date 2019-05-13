@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X_UA-compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>덴모빌리</title>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="./css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!--js-->
+    <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/vendor/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/vendor/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    
+    function insertImg(){
+        var getLength = $(".wrap .product_wrap li").length;
+        //console.log(getLength);
+        
+        for(i=1; i<=getLength; i++){
+            //console.log("hi"+i);
+            $(".wrap .product_wrap li:nth-child("+i+")").css({"background-image":"url(./img/product/p"+i+".png)","background-reepat":"no-repeat","background-size":"cover","background-position":"center"});
+            
+            if(i==1){
+                $(".product_wrap li:nth-child("+i+") p").append("ARIA LEATHER");
+            }else if(i==2){
+                $(".product_wrap li:nth-child("+i+") p").append("SUNSHINE SUNBRELLA NAVY");
+            }else if(i==3){
+                $(".product_wrap li:nth-child("+i+") p").append("SUNSHINE SUNBRELLA GREY");    
+            }else if(i==4){
+                $(".product_wrap li:nth-child("+i+") p").append("GREECE AQUACLEAN GREY");    
+            }else if(i==5){
+                $(".product_wrap li:nth-child("+i+") p").append("GREECE AQUACLEAN NAVY");   
+            }else if(i==6){
+                $(".product_wrap li:nth-child("+i+") p").append("VENICE AQUACLEAN");  
+            }else if(i==7){
+                $(".product_wrap li:nth-child("+i+") p").append("ARIA AQUACLEAN 세미형");  
+            }else if(i==8){
+                $(".product_wrap li:nth-child("+i+") p").append("ARIA AQUACLEAN 일자형");  
+            }else if(i==9){
+                $(".product_wrap li:nth-child("+i+") p").append("ENOVA AQUACLEAN");  
+            }else if(i==10){
+                $(".product_wrap li:nth-child("+i+") p").append("TOMMY AQUACLEAN");  
+            }else if(i==11){
+                $(".product_wrap li:nth-child("+i+") p").append("PANDORA AQUACLEAN");
+            }else if(i==12){
+                $(".product_wrap li:nth-child("+i+") p").append("DAVINCHI");
+            }else if(i==13){
+                $(".product_wrap li:nth-child("+i+") p").append("BERLIN");
+            }else if(i==14){
+                $(".product_wrap li:nth-child("+i+") p").append("SIENA");
+            }
+        }
+    }
+    
+    function loadMore(){
+        
+    }
+    
+</script>
+
+<style>
+    body{position:relative;}
+    .positioning{width:100%; height:100px; position:fixed; /*top:0; left:0;*/ z-index:9998;}
+    
+    .wrap .filter_wrap{width:100%; padding:80px 0; background:red;}
+    
+    .wrap .filter_wrap .inner_wrap{float:left; position:relative; margin-right:30px; width:300px;}
+    .wrap .filter_wrap .inner_wrap1{width:215px;}
+    
+    .wrap .filter_wrap .inner_wrap .input{background:rgba(255,255,255,0.5); position:relative; width:100%; cursor:pointer; border-bottom:2px solid rgba(50,50,50,1);}
+    .wrap .filter_wrap .inner_wrap .input p{width:100%; font-size:24px; line-height:24px; font-weight:600; padding:15px 0 15px 15px;}
+    .wrap .filter_wrap .inner_wrap .input span{width:16px; height:8px; background:cyan; display:block; position:absolute; right:0; top:23px; cursor:pointer;}
+    
+    .wrap .filter_wrap .inner_wrap .filter{position:absolute; top:56px; left:0; width:100%; background:rgba(255,255,255,1); box-shadow:5px 5px 8px -8px rgba(0,0,0,0.2); display:none;}
+    .wrap .filter_wrap .inner_wrap .filter li{font-size:24px; line-height:24px; padding:15px 0 15px 15px; font-weight:600; cursor:pointer; opacity:0.8;}
+    .wrap .filter_wrap .inner_wrap .filter li:hover{opacity:1;}
+    
+    .wrap .filter_wrap:after{content:""; display:block; clear:both;} /*clearfix*/
+    
+    /*product*/
+    .wrap .product_wrap{width:100%;}
+    .wrap .product_wrap li{width:600px; height:450px; float:left; background:green; position:relative; margin-bottom:96px; cursor:pointer; opacity:0.9;}
+    .wrap .product_wrap li:hover{opacity:1;}
+    .wrap .product_wrap li:nth-child(even){float:right;}
+    /*product name*/
+    .wrap .product_wrap li p{position:absolute; bottom:-40px; left:0; font-family:NotoSansCJKkr;}
+    .wrap .product_wrap:after{content:""; display:block; clear:both;}/*clearfix*/
+    
+    /*detail media query*/
+    @media screen and (max-width:1024px){
+    }
+    
+    @media screen and (max-width:768px){
+    }
+    
+    @media screen and (max-width:415px){
+    }
+    
+</style>
+    
+<body>
+    
+    <div include-html="header.html" class="positioning"></div>
+    
+    <div class="sub_banner">
+        <div class="txt">
+            <p></p>
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="filter_wrap">
+            <div class="inner_wrap inner_wrap1">
+                <div class="input">
+                    <p>전체보기</p>
+                    <span>btn</span>
+                </div>
+
+                <ul class="filter">
+                    <li>전체보기</li>
+                    <li>거실가구</li>
+                    <li>주방가구</li>
+                    <li>침실가구</li>
+                </ul>
+            </div><!--inner wrap END-->
+            
+            <div class="inner_wrap">
+                <div class="input">
+                    <p>--</p>
+                    <span>btn</span>
+                </div>
+                
+                <ul class="filter">
+                    <li>--</li>
+                    <li>aira leather</li>
+                    <li>sunshine sunbrella</li>
+                    <li>greece aquaclean</li>
+                    <li>venice aquaclean</li>
+                    <li>aria aquaclean</li>
+                    <li>enova aquaclean</li>
+                    <li>tommy aquaclean</li>
+                    <li>pandora aquaclean</li>
+                </ul>
+
+                <ul class="filter">
+                    <li>--</li>
+                    <li>davinchi</li>
+                    <li>berlin</li>
+                    <li>siena</li>
+                </ul>
+
+                <ul class="filter">
+                    <li>--</li>
+                </ul>
+            </div><!--inner wrap END-->
+        </div><!--filter wrap END-->
+        
+        <ul class="product_wrap">
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+            <li><p></p></li>
+        </ul>
+
+        <p class="see_more">제품 더보기<span>icon</span></p>
+        
+        <div>section 4</div>
+    </div>
+    
+    <div include-html="footer.html"></div>
+    
+    <script>
+        includeHTML();
+        getUrl();
+        insertImg();
+    </script>
+    
+</body>
+    
+</html>

@@ -6,19 +6,61 @@
     <!-- own css -->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-    
+
 <style>
     /*turn off mobile header and side nav*/
     .header_m{display:none;}
     
     /*css*/
-    .header{height:100px; background:rgba(0,0,0,0.5);}
-    .header li{margin-top:38px; color:#fff; font-size:20px; font-weight:600; letter-spacing:-0.5px; cursor:pointer; opacity:0.8; height:24px;}
-    .header li:hover{opacity:1;}
+    .gnb_wrap{width:100%; border-bottom:1px solid rgba(255,255,255,0.2);}
+    
+    /*logo*/
+    .gnb_wrap .logo_wrap{position:relative; z-index:2;}
+    .gnb_wrap .logo_wrap .logo{position:absolute; left:100px; top:38px; width:210px; height:24px; cursor:pointer;}
+    .gnb_wrap .logo_wrap .logo img{width:100%;}
+    
+    /*pc logo black and white*/
+    .gnb_wrap .logo_wrap .logo_w{opacity:1;}
+    .gnb_wrap .logo_wrap .logo_b{opacity:0;}
+    
+    /*menu*/
+    .header{height:100px; padding:0 100px; position:relative; z-index:1;}
+    .header li{margin-top:38px; padding-bottom:38px; font-size:20px; font-weight:600; letter-spacing:-0.5px; cursor:pointer; height:24px; opacity:0.9; border-bottom-style:none; border-bottom-width:2px; border-bottom-color:rgba(255,255,255,1);}
+    .header li a{color:rgba(255,255,255,1); display:block;}
+    .header li:hover{
+        border-bottom-style:solid;
+        opacity:1;
+    }
     .header li.menu{float:right;}
-    .header li.logo{float:left; width:196px; background:blue;}
     .header .add_margin{margin-right:40px;}
     .header:after{content:""; display:block; clear:both;}/*clearfix*/
+    
+    /*hamburger menu*/
+    .ham_wrap{width:100vw; height:100vh; position:absolute; left:-100vw; top:0; background:rgba(255,255,255,1);}
+    .ham_wrap .ham_header{width:100%; height:100px; border-bottom:1px solid rgba(0,0,0,0.2); position:relative;}
+    
+    /*hamburger logo*/
+    .ham_wrap .ham_header li:nth-child(1){width:210px; height:24px; position:absolute; left:50%; top:38px; margin-left:-105px;}
+    
+    /*hamburger close button*/
+    .ham_wrap .ham_header li:nth-child(2){width:36px; height:36px; position:absolute; left:30px; top:32px;}
+    
+    /*hamburger logo & close button width*/
+    .ham_wrap .ham_header li img{width:100%;}
+    
+    /*hamburger menu*/
+    .ham_wrap .ham_menu{font-size:48px; font-weight:600; line-height:48px; padding:60px 30px; letter-spacing:-2px;}
+    .ham_wrap .ham_menu li{padding-bottom:40px;}
+    .ham_wrap .ham_menu li a{color:rgba(150,150,150,1);/*when active font color change to rgba(50,50,50,1);*/}
+    .ham_wrap .ham_menu li:nth-child(3){padding-bottom:0px;}
+    
+    /*hamburger sns*/
+    .ham_wrap .ham_sns{padding:0 30px;}
+    .ham_wrap .ham_sns li{width:24px; height:24px; display:block; float:left; padding: 0 20px; border-right:1px solid rgba(0,0,0,0.2);}
+    .ham_wrap .ham_sns li:nth-child(1){padding:0 20px 0 0;}
+    .ham_wrap .ham_sns li:nth-child(3){width:53px; border-right:none;}
+    .ham_wrap .ham_sns:after{content:""; display:block; clear:both;}/*clearfix*/
+    
     
     /*detail media query*/
     @media screen and (max-width:1024px){
@@ -27,37 +69,88 @@
     @media screen and (max-width:768px){
         /*turn off pc header*/
         .header{display:none;}
+        .logo_wrap{display:none;
+        }
         /*turn on mobile header and side nav*/
-        .header_m{display:block; position:relative; height:100px; width:100%; background:rgba(0,0,0,0.2);}
+        .header_m{display:block; position:relative; height:100px; width:100%;}
         
-        .header_m .ham_icon{width:36px; height:36px; background:rgba(255,0,0,0.4); padding:32px 0;}
+        .header_m .ham_icon{width:36px; height:36px; position:absolute; left:30px; top:32px;}
+        
+        /*ham icon black and white*/
+        .header_m .ham_icon_w{opacity:1;}
+        .header_m .ham_icon_b{opacity:0;}
+        
         .header_m .ham_icon img{width:36px; height:36px;}
-        .header_m .side_nav{display:none; width:100vw; height:100vh; background:rgba(0,0,0,0.7);}
+        
+        /*mobile header logo*/
+        .header_m .logo_m{width:210px; height:24px; position:absolute; left:50%; top:38px; margin-left:-105px;}
+        .header_m .logo_m img{width:100%;}
+        
+        /*tablet mobile logo black and white*/
+        .header_m .logo_m_w{opacity:1;}
+        .header_m .logo_m_b{opacity:0;}
     }
     
     @media screen and (max-width:415px){
         .header_m{height:60px;}
-        .header_m .ham_icon{padding:12px 0;}
+        .header_m .ham_icon{left:20px; top:12px;}
+        /*mobile header logo*/
+        .header_m .logo_m{width:126px; height:14px; top:23px; margin-left:-63px;}
+        
+        /*ham header*/
+        .ham_wrap .ham_header{height:60px;}
+        
+        /*close button*/
+        .ham_wrap .ham_header li:nth-child(2){left:20px; top:12px;}
+        
+        /*logo*/
+        .ham_wrap .ham_header li:nth-child(1){width:126px; height:14px; top:23px; margin-left:-64px;}
+        
+        /*ham menu*/
+        .ham_wrap .ham_menu{font-size:32px; line-height:32px; padding:40px 20px; letter-spacing:-1.5px;}
+        .ham_wrap .ham_menu li{padding-bottom:30px;}
+        
+        /*ham sns*/
+        .ham_wrap .ham_sns{padding:0 20px;}
     }
     
 </style>
 
 <body>
-    <div class="wrap">
+    <div class="gnb_wrap">
+        <div class="logo_wrap">
+            <div class="logo logo_w"><a href="index.html"><img src="img/logo_w.png"></a></div><!--logo white-->
+            <div class="logo logo_b"><a href="index.html"><img src="img/logo_b.png"></a></div><!--logo black-->
+        </div>
+        
         <ul class="header">
-            <li class="logo">logo</li>
-            <li class="menu">About</li>
-            <li class="menu add_margin">Material</li>
-            <li class="menu add_margin">Product</li>
+            <li class="menu"><a href="./about.html">About</a></li>
+            <li class="menu add_margin"><a href="./material.html">Material</a></li>
+            <li class="menu add_margin"><a href="./product.html">Product</a></li>
         </ul>
         <div class="header_m">
-            <div class="ham_icon"><img src="img/favicon.png"></div>
-            <ul class="side_nav">
-                <li>side nav</li>
-                <li>side nav</li>
-                <li>side nav</li>
-            </ul>
+            <div class="ham_icon ham_icon_w"><img src="img/icon/ham_icon_w.png"></div>
+            <div class="ham_icon ham_icon_b"><img src="img/icon/ham_icon_b.png"></div>
+            <div class="logo_m logo_m_w"><a href="index.html"><img src="img/logo_w.png"></a></div><!--logo white-->
+            <div class="logo_m logo_m_b"><a href="index.html"><img src="./img/logo_b.png"></a></div><!--logo black-->
         </div>
+    </div>
+    
+    <div class="ham_wrap">
+        <ul class="ham_header">
+            <li><a href="index.html"><img src="./img/logo_b.png"></a></li><!--hamburger logo-->
+            <li><img src="./img/icon/close_btn.png"></li><!--hamburger close button-->
+        </ul>
+        <ul class="ham_menu">
+            <li><a href="./product.html">Product</a></li>
+            <li><a href="./material.html">Material</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+        <ul class="ham_sns">
+            <li><a href="#"><img src="./img/icon/sns_1.png"></a></li><!--facebook-->
+            <li><a href="#"><img src="./img/icon/sns_2.png"></a></li><!--instagram-->
+            <li><a href="#"><img src="./img/icon/sns_3.png"></a></li><!--blog-->
+        </ul>
     </div>
 </body>
     

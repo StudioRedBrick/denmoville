@@ -44,12 +44,14 @@
   margin: 0;
   padding: 0;
 }
+
 .flexslider .slides > li {
   display: none;
+    overflow:hidden;
   -webkit-backface-visibility: hidden;
 }
 .flexslider .slides img {
-  width: 100%;
+    width:100%;
   display: block;
 }
 .flexslider .slides:after {
@@ -97,6 +99,7 @@ html[xmlns] .flexslider .slides {
   min-height: 100%;
   -moz-user-select: none;
 }
+
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;
@@ -213,10 +216,11 @@ html[xmlns] .flexslider .slides {
   bottom: 40px;
     left:50%;
     margin-left:-620px;
+    z-index:3;
 }
 
 .flex-control-nav li {
-    width:155px;
+    width:33.3333%;
     zoom: 1;
     *display: inline;
     position:absolute;
@@ -225,20 +229,20 @@ html[xmlns] .flexslider .slides {
 
 .flex-control-nav li:nth-child(2){
     left:50%;
-    margin-left:-77.5px;
+    margin-left:-16.6666%;
 }
 
 .flex-control-nav li:nth-child(3){
     left:100%;
-    margin-left:-155px;
+    margin-left:-33.3333%;
 }
 
 .flex-control-paging li a {
-  width: 155px;
+  width: 0%;
   height: 2px;
   display: block;
   background: #666;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   text-indent: -9999px;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -251,14 +255,14 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: #333;
-  background: rgba(255, 0, 0, 0.7);
+  background: rgba(255, 0, 0, 1);
 }
 .flex-control-paging li a.flex-active {
   background: #000;
   background: rgba(255, 255, 255, 1);
   cursor: default;
 }
+
 .flex-control-thumbs {
   margin: 5px 0 0;
   position: static;
@@ -297,11 +301,9 @@ html[xmlns] .flexslider .slides {
     .flex-control-nav {width:904px; margin-left:-452px;}
 }
 @media screen and (max-width:768px){
-    .flexslider .slides img{height:100vh; width:200%;/*width:213.335%로하면 디자인 된 수치로 height 설정됩니다.*/}
     .flex-control-nav {width:708px; margin-left:-354px;}
 }
 @media screen and (max-width:415px){
-    .flexslider .slides img{height:100vh; width:400%;}
     .flex-control-nav {width:87.5%; margin-left:-43.25%;}
     .flex-control-nav li {width:33.3333%;}
     .flex-control-paging li a{width:100%;}

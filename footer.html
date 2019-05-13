@@ -8,15 +8,18 @@
 </head>
     
 <style>
-    .footer{background:rgba(0,0,0,0.1);}
+    .footer_wrap{width:100%; background:rgba(255,255,255,1);}
+    .footer{padding:0 100px;}
     .footer ul{padding:80px 0 60px 0; float:left;}
-    .footer ul li{float:left; cursor:pointer; font-size:20px; color:#646464;}
-    
-    .footer .menu{background:rgba(0,0,0,0.2);}
-    .footer .menu .logo{width:210px; height:24px; margin:0 80px 0 0; background:blue;}
+    .footer ul li{float:left; cursor:pointer; font-size:20px; font-weight:400;}
+    .footer ul li:hover{font-weight:600;}
+    .footer ul li a{color:#646464;}
+
+    .footer .menu .logo{width:210px; height:24px; margin:0 80px 0 0;}
+    .footer .menu .logo img{width:100%;}
     .footer .menu .add_margin{margin-right:40px;}
     
-    .footer .sns{float:right; background:rgba(0,0,0,0.2);}
+    .footer .sns{float:right;}
     .footer .sns li{padding:0 20px; border-left:1px solid #e6e6e6;}
     .footer .sns li:nth-child(1){border-left:none;}
     .footer .sns li:nth-child(3){padding:0 0 0 20px;}
@@ -27,9 +30,12 @@
 
     /*detail media query*/
     @media screen and (max-width:1024px){
+        .footer{padding:0 60px;}
+        .footer .menu .logo{margin:0 50px 0 0;}
+        .footer .menu .add_margin{margin-right:30px;}
     }
     
-    @media screen and (max-width:768px){
+    @media screen and (max-width:940px){
         .footer ul{padding:0; float:none; width:100%;}
         .footer ul li{float:none;}
         
@@ -39,29 +45,35 @@
         .footer .menu .logo{margin:0 auto 40px auto;}
         .footer .menu .add_margin{margin-right:0px;}
         
-        .footer .sns{width:247px; float:none; margin:0 auto 40px auto; background:red;}
-        .footer .sns li{float:left;}
+        .footer .sns{width:275px; float:none; margin:0 auto 40px auto;}
+        .footer .sns li{float:left; padding:0 43px;}
+        .footer .sns li:nth-child(1){padding:0 43px 0 0;}
+        .footer .sns li:nth-child(3){padding:0 0 0 43px;}
         
         .footer .sns:after{content:""; display:block; clear:both;}/*clearfix*/
     }
     
     @media screen and (max-width:415px){
+        .footer .sns{width:239px;}
+        .footer .sns li{padding:0 34px;}
+        .footer .sns li:nth-child(1){padding:0 34px 0 0;}
+        .footer .sns li:nth-child(3){padding:0 0 0 34px;}
     }
 </style>
 
 <body>
-    <div class="wrap">
+    <div class="footer_wrap">
         <div class="footer">
             <ul class="menu">
-                <li class="logo">logo</li>
-                <li class="add_margin">About</li>
-                <li class="add_margin">Material</li>
-                <li>Product</li>
+                <li class="logo"><a href="index.html"><img src="./img/logo_b.png"></a></li><!--footer logo-->
+                <li class="add_margin"><a href="./product.html">Product</a></li>
+                <li class="add_margin"><a href="./material.html">Material</a></li>
+                <li><a href="./about.html">About</a></li>
             </ul>
             <ul class="sns">
-                <li>face</li>
-                <li>inst</li>
-                <li>blog</li>
+                <li><a href="#"><img src="./img/icon/sns_1.png"></a></li><!--facebook-->
+                <li><a href="#"><img src="./img/icon/sns_2.png"></a></li><!--instagram-->
+                <li><a href="#"><img src="./img/icon/sns_3.png"></a></li><!--blog-->
             </ul>
             <div class="copyright">&copy; Den Mobili. ALL RIGHTS RESERVED</div>
         </div>
