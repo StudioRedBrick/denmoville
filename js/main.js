@@ -73,7 +73,6 @@ function hamMenu(){
     var ua = navigator.userAgent;
     var event = (ua.match(/iPhone/i)) ? 'touchstart' : 'click';
 
-출처: https://sweetdolphin.tistory.com/entry/iphone-ios-에서-안먹히는-click-event-jquery-처리하기 [코딩하는돌고래]
     //open hamburger menu
     $(".gnb_wrap .header_m .ham_icon").on('click touchstart', function(){
         console.log('jjjjj');
