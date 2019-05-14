@@ -39,14 +39,19 @@ font-family: 'Noto Sans KR', sans-serif;
     
     /*detail media query*/
     @media screen and (max-width:1024px){
+        .sub_banner{height:569px;}
+        .sub_banner .txt{top:252px;}
     }
     
     @media screen and (max-width:768px){
+        .sub_banner{height:427px;}
+        .sub_banner .txt{top:202px;}
         .sub_banner p{font-size:64px; line-height:64px; letter-spacing:-2.5px;}
         .sub_banner span{font-size:20px; line-height:1.5;}
     }
     
     @media screen and (max-width:415px){
+        .sub_banner{height:480px;}
         .sub_banner p{font-size:48px; line-height:48px; letter-spacing:-2px;}
         .sub_banner span{font-size:16px; padding-top:6px;}
     }
