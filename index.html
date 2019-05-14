@@ -63,6 +63,8 @@
             $(".flexslider .banner_title li").css({"color":"rgba(255,255,255,0.5)"});
             //turn up selected title opacity
             $(".flexslider .banner_title li:nth-child("+value+")").css({"color":"rgba(255,255,255,1)"});
+            //turn up selected title opacity
+            $(".flexslider .banner_title li:nth-child("+value+") span").css({"color":"rgba(255,255,255,1)"});
             
             if(window.matchMedia("(max-width:415px)").matches){
                 //turn down all banner title opacity
@@ -103,7 +105,7 @@
     .positioning{width:100%; height:100px; position:fixed; /*top:0; left:0;*/ z-index:9998;}
     .flexslider .banner_title{width:1240px; position:absolute; left:50%; bottom:60px; margin-left:-620px; z-index:3;}
     .flexslider .banner_title li{width:33.3333%; float:left; text-align:center; font-size:16px; font-weight:normal; color:rgba(255,255,255,0.5); display:block; cursor:pointer;}
-    .flexslider .banner_title li span{font-weight:600; padding-right:10px;}
+    .flexslider .banner_title li span{font-weight:600; padding-right:10px; color:rgba(255,255,255,0.5);}
     .flexslider .banner_title:after{content:""; display:block; clear:both;}/*clearfix*/
     
     /*insert banner img*/
