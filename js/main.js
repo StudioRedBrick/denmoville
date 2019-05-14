@@ -89,7 +89,7 @@ function getUrl(){
         img3 = './img/sub_banner3.png';
     
     //'http://34.85.120.42/product.html'
-    if(url == 'http://127.0.0.1:50192/product.html'){
+    if(url == 'http://34.85.120.42/product.html'){
         console.log('product page');
         $(".sub_banner").css({"background-image":"url("+img1+")","background-position":"center"});
         $(".sub_banner .txt p").append('Product');
