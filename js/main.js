@@ -74,7 +74,7 @@ function hamMenu(){
     //var event = (ua.match(/iPhone/i)) ? 'touchstart' : 'click';
 
     //open hamburger menu
-    $(".gnb_wrap .header_m .ham_icon").off('click').on('click', function(){
+    $(".gnb_wrap .header_m .ham_icon").on('click', function(){
         console.log('jjjjj');
         $(".ham_wrap").animate({"left":"0"},200,'swing');
     });
