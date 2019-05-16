@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*tabs*/
+.wrap .tabs{width:720px; margin:0 auto;}
+.wrap .tabs li{float:left; width:25%; text-align:center; padding:22px 0; cursor:pointer; opacity:0.7; font-family: 'Noto Sans KR', sans-serif; font-size:24px;}
+.active{border-bottom:2px solid rgba(50,50,50,1);}
+.wrap .tabs:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*material logo*/
+.wrap .inner_wrap .mat_logo{position:relative; width:500px; height:250px; margin:80px auto 30px auto;}
+.wrap .inner_wrap .mat_logo li{position:absolute; left:50%; top:0;}
+.wrap .inner_wrap .mat_logo li:nth-child(1){width:326px; height:216px; margin-left:-163px; top:17px; background-image:url(../img/material/matlogo1.png); background-repeat:no-repeat; background-size:contain; display:block;}
+.wrap .inner_wrap .mat_logo li:nth-child(2){width:388.8px; height:99.9px; margin-left:-194.4px; top:75px; background-image:url(../img/material/matlogo2.png); background-repeat:no-repeat; background-size:contain; display:none;}
+.wrap .inner_wrap .mat_logo li:nth-child(3){width:500px; height:146px; margin-left:-250px; top:52px; background-image:url(../img/material/matlogo3.png); background-repeat:no-repeat; background-size:contain; display:none;}
+.wrap .inner_wrap .mat_logo li:nth-child(4){width:396px; height:106px; margin-left:-198px; top:74px; background-image:url(../img/material/matlogo4.png); background-repeat:no-repeat; background-size:contain; display:none;}
+
+/*material introduction*/
+.wrap .inner_wrap .mat_int{width:960px; margin:0 auto; text-align:center; padding-bottom:100px;}
+
+/*material banner*/
+.wrap .inner_wrap .mat_banner{width:100%; height:400px; background-image:url(../img/material/mat_banner1.png); background-repeat:no-repeat; background-size:cover; background-position:center; text-indent:-9999px;}
+
+/*material about*/
+.wrap .inner_wrap .mat_abt{padding:40px 0 60px 0;}
+.wrap .inner_wrap .mat_abt li{width:600px; float:left;}
+.wrap .inner_wrap .mat_abt li:nth-child(2){float:right;}
+.wrap .inner_wrap .mat_abt .title{font-weight:bold; padding-bottom:12px;}
+.wrap .inner_wrap .mat_abt:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*material video*/
+.wrap .inner_wrap .mat_vid{width:100%; padding:25px 0; border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; cursor:pointer;}
+.wrap .inner_wrap .mat_vid p{width:208px; margin:0 auto; font-size:20px; color:#646464; line-height:20px;}
+.wrap .inner_wrap .mat_vid p span{width:24px; height:24px; background-image:url(../img/material/vid_icon.png); background-repeat:no-repeat; background-size:contain; display:block; float:right; margin-top:-1.5px;}
+.wrap .inner_wrap .mat_vid p a{color:#646464;}
+.wrap .inner_wrap .mat_vid p:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*material content*/
+.wrap .inner_wrap .mat_cnt{padding-top:60px;}
+.wrap .inner_wrap .mat_cnt .img{width:590px; height:332px; float:left; text-indent:-9999px;}
+.wrap .inner_wrap .mat_cnt li{width:590px; float:right;}
+.wrap .inner_wrap .mat_cnt li span{display:block; width:100px; height:2px; background:#323232; margin-bottom:40px;}
+.wrap .inner_wrap .mat_cnt li .title{font-family: 'Noto Sans KR', sans-serif; font-size:24px; line-height:1.5; font-weight:bold; padding-bottom:16px;}
+.wrap .inner_wrap .mat_cnt li .cnt_txt{font-family: 'Noto Sans KR', sans-serif; font-size:24px; line-height:1.5;}
+/*even content box*/
+.wrap .inner_wrap .cnt_even .img{float:right;}
+.wrap .inner_wrap .cnt_even li{float:left;}
+.wrap .inner_wrap .cnt3{padding-bottom:33px;}
+.wrap .inner_wrap .mat_cnt:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*insert images*/
+.wrap .inner_wrap .cnt1 .img{background-image:url(../img/material/tab1/cnt1.png); background-repeat:no-repeat; background-size:cover;}
+.wrap .inner_wrap .cnt2 .img{background-image:url(../img/material/tab1/cnt2.png); background-repeat:no-repeat; background-size:cover;}
+.wrap .inner_wrap .cnt3 .img{background-image:url(../img/material/tab1/cnt3.png); background-repeat:no-repeat; background-size:cover;}
+
+/*ribbon*/
+.ribbon{background-image:url(../img/ribbon_2.png);}
+.ribbon ul{width:300px;}
+.ribbon ul li{width:100%;}
+.ribbon p{padding:80px 0 40px 0;}
+
+/*detail media query*/
+@media screen and (max-width:1024px){
+    /*material introduction*/
+    .wrap .inner_wrap .mat_int{width:902px; margin:0 auto; text-align:center; padding-bottom:100px;}
+    /*material banner*/
+    .wrap .inner_wrap .mat_banner{height:290px;}
+    /*material about*/
+    .wrap .inner_wrap .mat_abt li{width:432px;}
+    /*material content*/
+    .wrap .inner_wrap .mat_cnt .img{width:422px; height:237px;}
+    .wrap .inner_wrap .mat_cnt li{width:422px;}
+}
+
+@media screen and (max-width:768px){
+    /*tabs*/
+    .wrap .tabs{width:100%; margin:0 auto;}
+    .wrap .tabs li{padding:16px 0; font-size:20px;}
+    
+    /*material logo*/
+    .wrap .inner_wrap .mat_logo{width:400px; height:200px; margin:60px auto 20px auto;}
+    .wrap .inner_wrap .mat_logo li:nth-child(1){width:260.8px; height:172.8px; margin-left:-130.4px; top:13px;}
+    .wrap .inner_wrap .mat_logo li:nth-child(2){width:311.04px; height:79.92px; margin-left:-155.52px; top:61px;}
+    .wrap .inner_wrap .mat_logo li:nth-child(3){width:400px; height:116.8px; margin-left:-200px; top:42px;}
+    .wrap .inner_wrap .mat_logo li:nth-child(4){width:316.8px; height:84.8px; margin-left:-158.4px; top:58px;}
+    
+    /*material introduction*/
+    .wrap .inner_wrap .mat_int{width:100%; padding-bottom:77px;}
+    
+    /*material banner*/
+    .wrap .inner_wrap .mat_banner{height:221px;}
+    
+    /*material about*/
+    .wrap .inner_wrap .mat_abt{padding:30px 0 40px 0;}
+    .wrap .inner_wrap .mat_abt li{width:47.8%;}
+    
+    /*material video*/
+    .wrap .inner_wrap .mat_vid{padding:18px 0;}
+    .wrap .inner_wrap .mat_vid p{width:170px; font-size:16px; line-height:16px;}
+    .wrap .inner_wrap .mat_vid p span{width:22px; height:22px; margin-top:-2px;}
+    
+    /*material content*/
+    .wrap .inner_wrap .mat_cnt{padding-top:40px;}
+    .wrap .inner_wrap .mat_cnt .img{width:47.81%; height:185px;}
+    .wrap .inner_wrap .mat_cnt li{width:47.81%;}
+    .wrap .inner_wrap .mat_cnt li span{display:none;}
+    .wrap .inner_wrap .mat_cnt li .title{font-size:16px; padding-bottom:10px;}
+    .wrap .inner_wrap .mat_cnt li .cnt_txt{font-size:16px;}
+    .wrap .inner_wrap .cnt3{padding-bottom:10px;}
+    
+    /*ribbon*/
+    .ribbon p{padding:60px 0 30px 0;}
+}
+
+@media screen and (max-width:415px){
+    /*tabs*/
+    .wrap .tabs{padding-top:20px;}
+    .wrap .tabs li{width:49.2%; padding:12px 0; font-size:16px; border:1px solid #969696;}
+    
+    /*material logo*/
+    .wrap .inner_wrap .mat_logo{width:250px; height:125px; margin:40px auto 20px auto;}
+    .wrap .inner_wrap .mat_logo li:nth-child(1){width:163px; height:108px; margin-left:-81.5px; top:9px;}
+    .wrap .inner_wrap .mat_logo li:nth-child(2){width:194.4px; height:79.92px; margin-left:-97.2px; top:34px;}
+    .wrap .inner_wrap .mat_logo li:nth-child(3){width:250px; height:73px; margin-left:-125px; top:27px;}
+    .wrap .inner_wrap .mat_logo li:nth-child(4){width:198px; height:53px; margin-left:-99px; top:40px;}
+    
+    /*material introduction*/
+    .wrap .inner_wrap .mat_int{padding-bottom:40px;}
+    /*material banner*/
+    .wrap .inner_wrap .mat_banner{width:210%; height:170px; margin-left:-50%; background-size:cover; background-position:0% 0%;}
+    
+    /*material about*/
+    .wrap .inner_wrap .mat_abt{padding:20px 0 40px 0;}
+    .wrap .inner_wrap .mat_abt li{width:100%; float:none;}
+    .wrap .inner_wrap .mat_abt li:nth-child(2){float:none; margin-top:22px;}
+    .wrap .inner_wrap .mat_abt .title{padding-bottom:8px;}
+    
+    /*material video*/
+    .wrap .inner_wrap .mat_vid{padding:16px 0;}
+    .wrap .inner_wrap .mat_vid p span{margin-top:-1px;}
+    
+    /*material content*/
+    .wrap .inner_wrap .mat_cnt .img{width:100%; height:157px;}
+    .wrap .inner_wrap .mat_cnt li{width:100%;}
+    .wrap .inner_wrap .mat_cnt li .title{padding-top:20px;}
+    .wrap .inner_wrap .cnt3{padding-bottom:0px;}
+    
+    /*ribbon*/
+    .ribbon p{padding:75px 0 30px 0;}
+    .ribbon ul{width:87.5%;}
+}

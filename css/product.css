@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.wrap .filter_wrap{width:100%; padding:80px 0;}
+
+.wrap .filter_wrap .inner_wrap{float:left; position:relative; margin-right:30px; width:300px; z-index:1;}
+.wrap .filter_wrap .inner_wrap1{width:215px;}
+
+.wrap .filter_wrap .inner_wrap .input{background:rgba(255,255,255,0.5); position:relative; width:100%; cursor:pointer; border-bottom:2px solid rgba(50,50,50,1);}
+.wrap .filter_wrap .inner_wrap .input p{width:100%; font-size:20px; line-height:20px; font-weight:600; padding:15px 0;}
+.wrap .filter_wrap .inner_wrap .input span{width:10px; height:5px; display:block; position:absolute; right:0; top:26px; cursor:pointer; background-image:url(../img/icon/arrow1.png); background-repeat:no-repeat; background-size:cover; text-indent:-9999px;}
+.wrap .filter_wrap .inner_wrap .input span.active{background-image:url(../img/icon/arrow2.png);}
+
+.wrap .filter_wrap .inner_wrap .filter{position:absolute; top:56px; left:0; width:100%; background:rgba(255,255,255,1); box-shadow:5px 5px 8px -8px rgba(0,0,0,0.2); display:none;}
+.wrap .filter_wrap .inner_wrap .filter li{font-size:20px; line-height:20px; padding:15px 0 15px 15px; font-weight:600; cursor:pointer; opacity:0.8;}
+.wrap .filter_wrap .inner_wrap .filter li:hover{opacity:1;}
+
+.wrap .filter_wrap:after{content:""; display:block; clear:both;} /*clearfix*/
+
+/*product*/
+.wrap .product_wrap{width:100%;}
+.wrap .product_wrap li{width:600px; height:450px; float:left; background:green; position:relative; margin-bottom:96px; cursor:pointer; opacity:0.9;}
+.wrap .product_wrap li:nth-child(even){float:right;}
+.wrap .product_wrap li:hover{opacity:1;}
+/*product name*/
+.wrap .product_wrap li p{position:absolute; bottom:-44px; left:0; font-family:NotoSansCJKkr; font-size:24px; line-height:24px;}
+.wrap .product_wrap:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*see more*/
+.see_more{width:100%; height:80px; cursor:pointer; margin-bottom:80px; border-top:1px solid rgba(150,150,150,0.5); border-bottom:1px solid rgba(150,150,150,0.5);}
+.see_more p{font-size:20px; line-height:1.5; width:115px; margin:0 auto; position:relative; padding-right:8px; margin-top:25px; text-align:left; color:rgba(50,50,50,0.7);}
+.see_more p span{display:block; width:24px; height:24px; position:absolute; top:2px; right:0; background-image:url(../img/icon/seemore_icon.png); background-repeat:no-repeat; background-size:cover;}
+
+/*ribbon*/
+.ribbon{background-image:url(../img/ribbon_2.png);}
+.ribbon ul{width:610px;}
+.ribbon ul li{float:left; width:49.18%;}
+.ribbon ul li:nth-child(2){float:right;}
+.ribbon p{padding:80px 0 40px 0;}
+.ribbon ul:after{content:""; display:block; clear:both;}/*clearfix*/
+
+
+/*detail media query*/
+@media screen and (max-width:1024px){
+    body{background-color:red;}
+    .wrap .product_wrap li{width:437px; height:328px;}
+}
+
+@media screen and (max-width:768px){
+    .wrap .product_wrap li{width:48.5%; height:251px;}
+    /*product name*/
+    .wrap .product_wrap li p{bottom:-40px; font-size:20px; line-height:20px;}
+    /*see more*/
+    .see_more{height:60px; margin-bottom:60px;}
+    .see_more p{font-size:16px; line-height:1.5; width:100px; padding-right:6px; margin-top:20px;}
+    .see_more p span{top:-1px;}
+    
+    /*ribbon*/
+    .ribbon ul{width:550px;}
+    .ribbon p{padding:60px 0 30px 0;}
+}
+
+@media screen and (max-width:415px){
+    .wrap .product_wrap li{width:100%; height:270px; margin-bottom:60px; opacity:1;}
+    /*product name*/
+    .wrap .product_wrap li p{bottom:-28px; font-size:16px; line-height:16px;}
+
+    .wrap .filter_wrap{padding:40px 0;}
+    .wrap .filter_wrap .inner_wrap{width:100%;}
+    .wrap .filter_wrap .inner_wrap1{z-index:2;}
+    .wrap .filter_wrap .inner_wrap2{z-index:1; margin-top:5px;}
+    .wrap .filter_wrap .inner_wrap .input p{font-size:16px; line-height:16px; padding:14px 0;}
+    .wrap .filter_wrap .inner_wrap .input span{top:20px; right:14px;}
+    .wrap .filter_wrap .inner_wrap .filter{top:46px;}
+    .wrap .filter_wrap .inner_wrap .filter li{font-size:16px; line-height:16px; padding:14px 0 14px 14px;}
+
+    /*ribbon*/
+    .ribbon ul{width:87.5%;}
+    .ribbon ul li{float:none;}
+    .ribbon ul li:nth-child(2){float:none; margin-top:10px;}
+    .ribbon p{padding:40px 0 30px 0;}
+}

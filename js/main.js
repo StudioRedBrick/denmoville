@@ -1,20 +1,4 @@
 $(document).ready(function(){ 
-    
-    $('.flexslider').flexslider({
-        animation: "fade",
-        animationLoop: true,
-        slideshow:true,
-        //itemWidth: 210,
-        itemMargin: 0,
-        minItems: 1,
-        maxItems: 1,
-        animationDuration: 1000,
-        move:1,
-        slideshowSpeed:5000,
-        controlNav:true,
-        directionNav:false,
-    });
-    
     gnbCss();
     hamMenu();
     subBannerLoad();
@@ -103,7 +87,7 @@ function getUrl(){
         console.log('about page');
         $(".sub_banner").css({"background-image":"url("+img3+")","background-position":"center"});
         $(".sub_banner .txt p").append('About');
-        $(".sub_banner .txt span").append('높은 품질의 재료를 사용하는것, 덴모빌리');        
+        $(".sub_banner .txt span").append('높은 품질의 재료를 사용하는것, 덴모빌리'); 
     }
 }
 

@@ -1,34 +1,28 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
-/*
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-font-family: 'Noto Sans KR', sans-serif;
-*/
-
-@font-face
-{
-    font-family:Noto Sans KR;
-    src: url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900|Noto+Sans+KR:400,500,700,900&subset=korean');
 
 /*reset*/
     *{margin:0; padding:0; font-family: 'Montserrat', sans-serif; hyphens:none; word-break:keep-all; color:rgba(50,50,50,1);}
     html{overflow-x:hidden;}
     body{margin:0; padding:0;}
     a{text-decoration:none; color:rgba(50,50,50,1);}
-    ul, li{list-style:none;}
+    ul, li{list-style:none; margin:0;}
     p, span, h1, h2, h3{margin:0; padding:0;}
     /*reset end*/
     
     .wrap{width:1240px; padding:0 100px; margin:0 auto;}
-    
+    .notosans{font-family:'Noto Sans KR', sans-serif; font-size:24px; line-height:1.5;}/*본문*/
+    .notosans-sub{font-family:'Noto Sans KR', sans-serif; font-size:20px; line-height:1.5;}/*작은본문*/
+
     /*media query*/
-    @media screen and (max-width:1024px){body{background:#00a7ff;}.wrap{width:904px; padding:0 60px;}}
-    @media screen and (max-width:768px){body{background:#7773db;}.wrap{width:89.6%; padding:0;}}
-    @media screen and (max-width:415px){body{background:#0080ff;}.wrap{width:87.5%; padding:0;}}
+    @media screen and (max-width:1024px){body{/*background:#00a7ff;*/}.wrap{width:904px; padding:0 60px;}}
+    @media screen and (max-width:768px){body{/*background:#7773db;*/}.wrap{width:89.6%; padding:0;}}
+    @media screen and (max-width:415px){body{/*background:#0080ff;*/}.wrap{width:87.5%; padding:0;}}
     
     /*---------------------------------------------------------------*/
+    body{position:relative;}
+    .positioning{width:100%; height:100px; position:fixed; z-index:9998;}
 
     /*sub banner*/
     .sub_banner{width:100%; height:800px; background-image:none; background-repeat:no-repeat; background-size:cover; position:relative; opacity:0;}
@@ -36,6 +30,13 @@ font-family: 'Noto Sans KR', sans-serif;
     .sub_banner .txt{width:50%; position:absolute; left:50%; top:337px; margin-left:-25%; text-align:center;}
     .sub_banner p{font-size:80px; line-height:80px; font-weight:600; letter-spacing:-3px; color:rgba(255,255,255,1);}
     .sub_banner span{display:block; font-size:24px; line-height:24px; font-family:'Noto Sans', sans-serif; padding-top:10px; color:rgba(255,255,255,1);}
+
+    /*ribbon*/
+    .ribbon{width:100%; height:352px; background-repeat:no-repeat; background-size:cover; margin-top:50px;}
+    .ribbon p{font-size:24px; line-height:33px; font-weight:bold; text-align:center; color:rgba(255,255,255,1);}
+    .ribbon ul{margin:0 auto;}
+    .ribbon ul li{text-align:center; border:1px solid rgba(255,255,255,1); font-size:24px; padding:26px 0 23px 0; color:rgba(255,255,255,1); cursor:pointer;}
+    .ribbon ul li a{color:rgba(255,255,255,1);}
     
     /*detail media query*/
     @media screen and (max-width:1024px){
@@ -44,14 +45,30 @@ font-family: 'Noto Sans KR', sans-serif;
     }
     
     @media screen and (max-width:768px){
+        .notosans{font-family:'Noto Sans KR', sans-serif; font-size:20px; line-height:1.5;}/*본문*/
+        .notosans-sub{font-family:'Noto Sans KR', sans-serif; font-size:16px; line-height:1.5;}/*작은본문*/
+        
         .sub_banner{height:427px;}
         .sub_banner .txt{top:202px;}
         .sub_banner p{font-size:64px; line-height:64px; letter-spacing:-2.5px;}
         .sub_banner span{font-size:20px; line-height:1.5;}
+        
+        /*ribbon*/
+        .ribbon{height:269px;}
+        .ribbon p{font-size:20px; line-height:33px;}
+        .ribbon ul li{font-size:20px; padding:17px 0 14px 0;}
     }
     
     @media screen and (max-width:415px){
+        .notosans{font-family:'Noto Sans KR', sans-serif; font-size:16px; line-height:1.5;}/*본문*/
+        .notosans-sub{font-family:'Noto Sans KR', sans-serif; font-size:14px; line-height:1.5;}/*작은본문*/
+        
         .sub_banner{height:480px;}
         .sub_banner p{font-size:48px; line-height:48px; letter-spacing:-2px;}
         .sub_banner span{font-size:16px; padding-top:6px;}
+        
+        /*ribbon*/
+        .ribbon{height:288px;}
+        .ribbon p{font-size:16px; line-height:1.5;}
+        .ribbon ul li{font-size:16px; padding:20px 0 17px 0; width:100%;}
     }

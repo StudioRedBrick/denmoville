@@ -7,7 +7,7 @@
     <meta http-equiv="X_UA-compatible" content="IE=Edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
-    <title>덴모빌리</title>
+    <title>DEN MOBILI</title>
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
     <!--css-->
@@ -16,11 +16,13 @@
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/product.css">
     <!--js-->
     <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery.flexslider.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/product.js"></script>
 </head>
 
 <script>
@@ -51,255 +53,9 @@
         }
       }
     };
-    
-    function insertImg(){
-        var getLength = $(".wrap .product_wrap li").length;
-        
-        for(i=1; i<=getLength; i++){
-            $(".wrap .product_wrap li:nth-child("+i+")").css({"background-image":"url(./img/product/p"+i+".png)","background-reepat":"no-repeat","background-size":"cover","background-position":"center"});
-            
-            if(i==1){
-                $(".product_wrap li:nth-child("+i+") p").append("ARIA LEATHER");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s1");
-            }else if(i==2){
-                $(".product_wrap li:nth-child("+i+") p").append("SUNSHINE SUNBRELLA NAVY");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s2");
-            }else if(i==3){
-                $(".product_wrap li:nth-child("+i+") p").append("SUNSHINE SUNBRELLA GREY");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s2");
-            }else if(i==4){
-                $(".product_wrap li:nth-child("+i+") p").append("GREECE AQUACLEAN GREY");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s3");
-            }else if(i==5){
-                $(".product_wrap li:nth-child("+i+") p").append("GREECE AQUACLEAN NAVY");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s3");
-            }else if(i==6){
-                $(".product_wrap li:nth-child("+i+") p").append("VENICE AQUACLEAN");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s4");
-            }else if(i==7){
-                $(".product_wrap li:nth-child("+i+") p").append("ARIA AQUACLEAN 세미형");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s5");
-            }else if(i==8){
-                $(".product_wrap li:nth-child("+i+") p").append("ARIA AQUACLEAN 일자형");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s5");
-            }else if(i==9){
-                $(".product_wrap li:nth-child("+i+") p").append("ENOVA AQUACLEAN");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s6");
-            }else if(i==10){
-                $(".product_wrap li:nth-child("+i+") p").append("TOMMY AQUACLEAN");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s7");
-            }else if(i==11){
-                $(".product_wrap li:nth-child("+i+") p").append("PANDORA AQUACLEAN");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m1 s8");
-            }else if(i==12){
-                $(".product_wrap li:nth-child("+i+") p").append("DAVINCHI");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m2 s9");
-            }else if(i==13){
-                $(".product_wrap li:nth-child("+i+") p").append("BERLIN");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m2 s10");
-            }else if(i==14){
-                $(".product_wrap li:nth-child("+i+") p").append("SIENA");
-                $(".product_wrap li:nth-child("+i+")").addClass("m0 m2 s11");
-            }
-        }
-    }
-    
-    function filter(){
-    //when 1st list is clicked
-        $(".wrap .filter_wrap .inner_wrap1 .filter li").on('click',function(){
-            var i = $(this).index();
-            var getTxt = $(this).text();
-            
-            //remove txt in input1
-            $(".wrap .filter_wrap .inner_wrap1 .input p").empty();
-            //append txt in input1
-            $(".wrap .filter_wrap .inner_wrap1 .input p").append(getTxt);
-            
-            //product filtering
-            $(".product_wrap li").css({"display":"none"});   
-            $(".product_wrap li.m"+i).css({"display":"block"}); 
-            
-            //reset 2nd input txt
-            $(".wrap .filter_wrap .inner_wrap2 .input p").empty();
-            $(".wrap .filter_wrap .inner_wrap2 .input p").append('--');
-            
-            //reset product li float
-            var lengthVal = $(".wrap .product_wrap li:visible").length;
-            console.log(lengthVal);
-            if(lengthVal == 1){
-                $(".wrap .product_wrap li:nth-child(even)").css({"float":"none"});   
-            }else{
-                $(".wrap .product_wrap li:nth-child(even):visible").css({"float":"right"});  
-            }
-            
-            //reset arrow button
-            $(".wrap .filter_wrap .inner_wrap1 .input span").removeClass("active");
-            $(".wrap .filter_wrap .inner_wrap2 .input span").removeClass("active");
-            
-            //close 1st filter list
-            $(this).parent().stop().fadeOut(200);
-        });
-        
-    //when 2nd list is clicked
-        $(".wrap .filter_wrap .inner_wrap2 .filter li").on('click',function(){
-            var i = $(this).index();
-            var getTxt = $(this).text();
-            var getParentTxt = $(".wrap .filter_wrap .inner_wrap1 .input p").text();
-            
-            //remove txt in input2
-            $(".wrap .filter_wrap .inner_wrap2 .input p").empty();
-            //append txt in input2
-            $(".wrap .filter_wrap .inner_wrap2 .input p").append(getTxt);
-            
-            //product filtering
-            $(".product_wrap li").css({"display":"none"});  
-            
-            if(getTxt == 'Aria Leather'){
-                $(".product_wrap li.s1").css({"display":"block"});     
-            }else if(getTxt == 'Sunshine Sunbrella'){
-                $(".product_wrap li.s2").css({"display":"block"});
-            }else if(getTxt == 'Greece Aquaclean'){
-                $(".product_wrap li.s3").css({"display":"block"});
-            }else if(getTxt == 'Venice Aquaclean'){
-                $(".product_wrap li.s4").css({"display":"block"});
-            }else if(getTxt == 'Aria Aquaclean'){
-                $(".product_wrap li.s5").css({"display":"block"});
-            }else if(getTxt == 'Enova Aquaclean'){
-                $(".product_wrap li.s6").css({"display":"block"});
-            }else if(getTxt == 'Tommy Aquaclean'){
-                $(".product_wrap li.s7").css({"display":"block"});
-            }else if(getTxt == 'Pandora Aquaclean'){
-                $(".product_wrap li.s8").css({"display":"block"});
-            }else if(getTxt == 'Davinchi'){
-                $(".product_wrap li.s9").css({"display":"block"});
-            }else if(getTxt == 'Berlin'){
-                $(".product_wrap li.s10").css({"display":"block"});
-            }else if(getTxt == 'Siena'){
-                $(".product_wrap li.s11").css({"display":"block"});
-            }else{
-                if(getParentTxt == '거실가구'){
-                    $(".product_wrap li.m1").css({"display":"block"});
-                }else if(getParentTxt == '주방가구'){
-                    $(".product_wrap li.m2").css({"display":"block"});         
-                }else if(getParentTxt == '침실가구'){
-                    $(".product_wrap li.m3").css({"display":"block"});     
-                }
-            }
-            
-            //reset product li float
-            var lengthVal = $(".wrap .product_wrap li:visible").length;
-            console.log(lengthVal);
-            if(lengthVal == 1){
-                $(".wrap .product_wrap li:nth-child(even)").css({"float":"none"});   
-            }else{
-                $(".wrap .product_wrap li:nth-child(even):visible").css({"float":"right"});  
-            }
-            
-            //reset arrow button
-            $(".wrap .filter_wrap .inner_wrap1 .input span").removeClass("active");
-            $(".wrap .filter_wrap .inner_wrap2 .input span").removeClass("active");
-
-            //close 2nd filter list
-            $(this).parent().stop().fadeOut(200);
-        });
-        
-        //open filter list 1
-        $(".wrap .filter_wrap .inner_wrap1 .input").on('click',function(){
-            
-            $(".wrap .filter_wrap .inner_wrap1 .filter").stop().fadeToggle(200);
-            $(".wrap .filter_wrap .inner_wrap2 .filter").stop().fadeOut(200);
-            
-            $(".wrap .filter_wrap .inner_wrap2 .input span").removeClass("active");
-            //arrow button
-            $(".wrap .filter_wrap .inner_wrap1 .input span").toggleClass("active");
-        });
-        
-        //open filter list 2
-        $(".wrap .filter_wrap .inner_wrap2 .input").on('click',function(){
-            
-            $(".wrap .filter_wrap .inner_wrap1 .filter").stop().fadeOut(200);
-            
-            var inputTxt = $(".wrap .filter_wrap .inner_wrap1 .input p").text();
-            
-            if(inputTxt == '거실가구'){
-                $(".wrap .filter_wrap .inner_wrap2 .filter1").stop().fadeToggle(200);
-            }else if(inputTxt == '주방가구'){
-                $(".wrap .filter_wrap .inner_wrap2 .filter2").stop().fadeToggle(200);     
-            }else if(inputTxt == '침실가구'){
-                $(".wrap .filter_wrap .inner_wrap2 .filter3").stop().fadeToggle(200);     
-            }else{
-                $(".wrap .filter_wrap .inner_wrap2 .filter").css({"display":"none"});
-            }
-            
-            
-            $(".wrap .filter_wrap .inner_wrap1 .input span").removeClass("active");
-            //arrow button
-            $(".wrap .filter_wrap .inner_wrap2 .input span").toggleClass("active");
-        });
-    }
-    
 </script>
-
-<style>
-    body{position:relative;}
-    .positioning{width:100%; height:100px; position:fixed; /*top:0; left:0;*/ z-index:9998;}
-    
-    .wrap .filter_wrap{width:100%; padding:80px 0; background:red;}
-    
-    .wrap .filter_wrap .inner_wrap{float:left; position:relative; margin-right:30px; width:300px; z-index:1;}
-    .wrap .filter_wrap .inner_wrap1{width:215px;}
-    
-    .wrap .filter_wrap .inner_wrap .input{background:rgba(255,255,255,0.5); position:relative; width:100%; cursor:pointer; border-bottom:2px solid rgba(50,50,50,1);}
-    .wrap .filter_wrap .inner_wrap .input p{width:100%; font-size:20px; line-height:20px; font-weight:600; padding:15px 0 15px 15px;}
-    .wrap .filter_wrap .inner_wrap .input span{width:10px; height:5px; display:block; position:absolute; right:0; top:26px; cursor:pointer; background-image:url(./img/icon/arrow1.png); background-repeat:no-repeat; background-size:cover; text-indent:-9999px;}
-    .wrap .filter_wrap .inner_wrap .input span.active{background-image:url(./img/icon/arrow2.png);}
-    
-    .wrap .filter_wrap .inner_wrap .filter{position:absolute; top:56px; left:0; width:100%; background:rgba(255,255,255,1); box-shadow:5px 5px 8px -8px rgba(0,0,0,0.2); display:none;}
-    .wrap .filter_wrap .inner_wrap .filter li{font-size:20px; line-height:20px; padding:15px 0 15px 15px; font-weight:600; cursor:pointer; opacity:0.8;}
-    .wrap .filter_wrap .inner_wrap .filter li:hover{opacity:1;}
-    
-    .wrap .filter_wrap:after{content:""; display:block; clear:both;} /*clearfix*/
-    
-    /*product*/
-    .wrap .product_wrap{width:100%;}
-    .wrap .product_wrap li{width:600px; height:450px; float:left; background:green; position:relative; margin-bottom:96px; cursor:pointer; opacity:0.9;}
-    .wrap .product_wrap li:nth-child(even){float:right;}
-    .wrap .product_wrap li:hover{opacity:1;}
-    /*product name*/
-    .wrap .product_wrap li p{position:absolute; bottom:-44px; left:0; font-family:NotoSansCJKkr; font-size:24px; line-height:24px;}
-    .wrap .product_wrap:after{content:""; display:block; clear:both;}/*clearfix*/
-
-    /*detail media query*/
-    @media screen and (max-width:1024px){
-        body{background-color:red;}
-        .wrap .product_wrap li{width:437px; height:328px;}
-    }
-    
-    @media screen and (max-width:768px){
-        .wrap .product_wrap li{width:48.5%; height:251px;}
-        /*product name*/
-        .wrap .product_wrap li p{bottom:-40px; font-size:20px; line-height:20px;}
-    }
-    
-    @media screen and (max-width:415px){
-        .wrap .product_wrap li{width:100%; height:270px; margin-bottom:60px; opacity:1;}
-        /*product name*/
-        .wrap .product_wrap li p{bottom:-28px; font-size:16px; line-height:16px;}
-        
-        .wrap .filter_wrap{padding:40px 0;}
-        .wrap .filter_wrap .inner_wrap{width:100%;}
-        .wrap .filter_wrap .inner_wrap1{z-index:2;}
-        .wrap .filter_wrap .inner_wrap2{z-index:1; margin-top:5px;}
-        .wrap .filter_wrap .inner_wrap .input p{font-size:16px; line-height:16px; padding:14px 0 14px 14px;}
-        .wrap .filter_wrap .inner_wrap .input span{top:20px; right:14px;}
-        .wrap .filter_wrap .inner_wrap .filter{top:46px;}
-        .wrap .filter_wrap .inner_wrap .filter li{font-size:16px; line-height:16px; padding:14px 0 14px 14px;}
-    }
-    
-</style>
     
 <body>
-    
     <div include-html="header.html" class="positioning"></div>
     
     <div class="sub_banner">
@@ -372,9 +128,15 @@
             <li><p></p></li>
         </ul>
 
-        <p class="see_more">제품 더보기<span>icon</span></p>
-        
-        <div>section 4</div>
+        <div class="see_more"><p>제품 더보기<span></span></p></div>
+    </div>
+    
+    <div class="ribbon">
+        <p>“사용자에게 더 가까운 덴모빌리가<br>되기 위해 노력합니다.”</p>
+        <ul>
+            <li><a href="https://smartstore.naver.com/denmobili">네이버 스토어로 가기</a></li>
+            <li><a href="/about.html">오프라인 매장 가기</a></li><!--location로 scroll down-->
+        </ul>
     </div>
     
     <div include-html="footer.html"></div>
@@ -382,10 +144,7 @@
     <script>
         includeHTML();
         getUrl();
-        insertImg();
-        filter();
     </script>
-    
 </body>
     
 </html>
