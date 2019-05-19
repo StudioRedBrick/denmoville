@@ -25,13 +25,15 @@ function modalHeight(){
 
 function openDetail(){
     $(".wrap .product_wrap li").on('click',function(){
-        $(".detail_wrap").fadeToggle(100);   
+        $(".detail_wrap").fadeToggle(100);
+        $(".wrap").css({"display":"none"});
     });
 }
 
 function closeDetail(){
     $(".detail_wrap .fix .inner_wrap .close_btn").on('click',function(){
         $(".detail_wrap").fadeToggle(100);
+        $(".wrap").css({"display":"block"});
     });
 }
 
