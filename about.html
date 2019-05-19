@@ -7,20 +7,20 @@
     <meta http-equiv="X_UA-compatible" content="IE=Edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
-    <title>덴모빌리</title>
+    <title>DEN MOBILI</title>
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
     <!--css-->
-    <link rel="stylesheet" type="text/css" href="./css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
     <!--js-->
     <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./js/vendor/jquery.flexslider.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/about.js"></script>
 </head>
 
 <script>
@@ -53,22 +53,6 @@
     };
     
 </script>
-
-<style>
-    body{position:relative;}
-    .positioning{width:100%; height:100px; position:fixed; /*top:0; left:0;*/ z-index:9998;}
-    
-    /*detail media query*/
-    @media screen and (max-width:1024px){
-    }
-    
-    @media screen and (max-width:768px){
-    }
-    
-    @media screen and (max-width:415px){
-    }
-    
-</style>
     
 <body>
     
@@ -82,10 +66,54 @@
     </div>
     
     <div class="wrap">
-        <div>section 1</div>
-        <div>section 2</div>
-        <div>section 3</div>
-        <div>section 4</div>
+        <div class="section section1">
+            <h3>Craftmanship</h3>
+            <p class="notosans txt">우수한 디자인과 최고급 소재 그리고 최상의 제조기술을 바탕으로<br> 제작된 프리미엄 가구를 합리적인 가격으로 생산자에서 소비자에게 직접 전달해드립니다.</p>
+            <ul>
+                <li>img1</li>
+                <li>img2</li>
+            </ul>
+            <p class="notosans align_center">“고객이 주문한 즉시, 국내 최고의 장인이 제작을 시작합니다. <br>꼼꼼한 원단 선별부터 검수까지 퀄리티를 놓치지 않는 덴모빌리를 만나보세요”</p>
+        </div>
+        
+        <div class="section section2">
+            <h3>Location</h3>
+            <p class="subtitle"><span>영업시간</span>10:00 ~ 19:00(주말 동일)</p>
+            <div class="map_wrap">
+                <div class="map">
+                    <p>하남</p>
+                    <div class="mapbox">map box</div>
+                    <ul class="addrs">
+                        <li>주소</li>
+                        <li>경기 하남시 산곡동로 81</li>
+                    </ul>
+                    <ul>
+                        <li>연락처</li>
+                        <li>031-794-5257</li>
+                    </ul>
+                </div>
+                <div class="map map2">
+                    <p>일산</p>
+                    <div class="mapbox">map box</div>
+                    <ul class="addrs">
+                        <li>주소</li>
+                        <li>경기 하남시 산곡동로 81</li>
+                    </ul>
+                    <ul>
+                        <li>연락처</li>
+                        <li>031-794-5257</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ribbon">
+        <p>“ 좋은 소재를 가지고 한 땀 한 땀 만들어 낸 가구,<br>그것이 바로 덴모빌리입니다.”</p>
+        <ul class="sub_ribbon">
+            <li><a href="/product.html">제품 보러 가기</a></li>
+            <li><a href="/material.html">소재 보러 가기</a></li>
+        </ul>
     </div>
     
     <div include-html="footer.html"></div>

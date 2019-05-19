@@ -1,5 +1,6 @@
 $(document).ready(function(){ 
     tabActive();
+    video();
 }); //document ready END 
 
 function tabActive(){
@@ -45,32 +46,54 @@ function tabActive(){
             $(".wrap .inner_wrap .cnt3").css({"display":"block"});
             //video display block
             $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
-            //cnt1 padding top = 40 due to video display block
-            $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 40 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            }else{
+                //cnt1 padding top on pc = 60 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+            }
+            
             tab1Append();    
         }else if(i==2){
             //cnt3 display none
             $(".wrap .inner_wrap .cnt3").css({"display":"none"});
             //video display block
             $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
-            //cnt1 padding top = 40 due to video display block
-            $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 40 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            }else{
+                //cnt1 padding top on pc = 60 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+            }
             tab2Append();     
         }else if(i==3){
             //cnt3 display block
             $(".wrap .inner_wrap .cnt3").css({"display":"block"});
             //video display block
             $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
-            //cnt1 padding top = 40 due to video display block
-            $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 40 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            }else{
+                //cnt1 padding top on pc = 60 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+            }
             tab3Append();      
         }else{
             //cnt3 display block
             $(".wrap .inner_wrap .cnt3").css({"display":"block"});
             //video display none
             $(".wrap .inner_wrap .mat_vid").css({"display":"none"});
-            //cnt1 padding top = 0 due to video display none
-            $(".wrap .inner_wrap .cnt1").css({"padding-top":"0"});
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 0 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"0px"});
+            }else{
+                //cnt1 padding top on pc = 20 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"20px"});
+            }
             tab4Append();     
         }
     });
@@ -197,4 +220,37 @@ function tab4Append(){
     //cnt3
     $(".wrap .inner_wrap .cnt3 li .title").append('텍스트가 노출됩니다. 텍스트가 노출됩니다.');
     $(".wrap .inner_wrap .cnt3 li .cnt_txt").append('텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다. 텍스트가 노출됩니다.');
+}
+
+function video(){
+    openVid();
+    closeVid();
+    vidTop();
+}
+
+function openVid(){
+    $(".wrap .inner_wrap .mat_vid").on('click',function(){
+        //$(".video_wrap").css({"display":"block"});
+        $(".video_wrap").fadeToggle(200);
+    });
+}
+
+function closeVid(){
+    $(".video_wrap .blanket .inner_wrap .close_btn").on('click',function(){
+        $(".video_wrap").fadeToggle(200);
+    });
+}
+
+function vidTop(){
+    var winHeight = ($(window).height())/2;
+    var vidHeight = ($(".video_wrap .blanket .inner_wrap").height())/2;
+    var value = winHeight-vidHeight;
+    
+    $(".video_wrap .blanket .inner_wrap").css({"margin-top":value});
+    
+    //change close button position on tablet and mobile
+    if (window.matchMedia("(max-width:768px)").matches){
+        console.log('tabler');
+        $(".video_wrap .blanket .inner_wrap .close_btn").css({"top":-value+30});          
+    }
 }

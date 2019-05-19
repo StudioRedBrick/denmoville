@@ -41,7 +41,6 @@
 
 /*detail media query*/
 @media screen and (max-width:1024px){
-    body{background-color:red;}
     .wrap .product_wrap li{width:437px; height:328px;}
 }
 

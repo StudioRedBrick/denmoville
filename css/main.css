@@ -33,10 +33,12 @@
 
     /*ribbon*/
     .ribbon{width:100%; height:352px; background-repeat:no-repeat; background-size:cover; margin-top:50px;}
-    .ribbon p{font-size:24px; line-height:33px; font-weight:bold; text-align:center; color:rgba(255,255,255,1);}
+    .main_ribbon{height:190px;}
+    .ribbon p{font-size:24px; line-height:1.5; font-weight:bold; text-align:center; color:rgba(255,255,255,1);}
+    .main_ribbon p{color:rgba(50,50,50,0.5); font-weight:normal;}
     .ribbon ul{margin:0 auto;}
-    .ribbon ul li{text-align:center; border:1px solid rgba(255,255,255,1); font-size:24px; padding:26px 0 23px 0; color:rgba(255,255,255,1); cursor:pointer;}
-    .ribbon ul li a{color:rgba(255,255,255,1);}
+    .ribbon ul.sub_ribbon li{text-align:center; border:1px solid rgba(255,255,255,1); font-size:24px; padding:26px 0 23px 0; color:rgba(255,255,255,1); cursor:pointer;}
+    .ribbon ul.sub_ribbon li a{color:rgba(255,255,255,1);}
     
     /*detail media query*/
     @media screen and (max-width:1024px){
@@ -56,7 +58,7 @@
         /*ribbon*/
         .ribbon{height:269px;}
         .ribbon p{font-size:20px; line-height:33px;}
-        .ribbon ul li{font-size:20px; padding:17px 0 14px 0;}
+        .ribbon ul.sub_ribbon li{font-size:20px; padding:17px 0 14px 0;}
     }
     
     @media screen and (max-width:415px){
@@ -70,5 +72,5 @@
         /*ribbon*/
         .ribbon{height:288px;}
         .ribbon p{font-size:16px; line-height:1.5;}
-        .ribbon ul li{font-size:16px; padding:20px 0 17px 0; width:100%;}
+        .ribbon ul.sub_ribbon li{font-size:16px; padding:20px 0 17px 0; width:100%;}
     }

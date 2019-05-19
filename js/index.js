@@ -3,7 +3,19 @@ $(document).ready(function(){
     customPager();
     bxSlider();
     matMatch();
+    moreBtn();
 }); //document ready END 
+
+function moreBtn(){
+    $(".wrap .section .more_btn").on('mouseenter',function(){
+        $(".wrap .section .more_btn a").stop().animate({"color":"rgba(255,255,255,1)"},200);
+        $(".wrap .section .more_btn").stop().animate({"backgroundColor":"rgba(50,50,50,1)"},200);
+    });
+    $(".wrap .section .more_btn").on('mouseleave',function(){
+        $(".wrap .section .more_btn a").stop().animate({"color":"rgba(50,50,50,1)"},200);
+        $(".wrap .section .more_btn").stop().animate({"backgroundColor":"rgba(255,255,255,1)"},200);
+    });
+}
 
 function checkBanner(){
     window.setInterval(function(){

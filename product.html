@@ -11,18 +11,23 @@
     <!--favicon-->
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
     <!--css-->
-    <link rel="stylesheet" type="text/css" href="./css/flexslider.css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">-->
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css">
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/product.css">
+    <link rel="stylesheet" type="text/css" href="./css/product_detail.css">
     <!--js-->
     <script type="text/javascript" src="./js/vendor/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/vendor/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="./js/vendor/slick.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="./js/product.js"></script>
+    <script type="text/javascript" src="./js/product_detail.js"></script>
+    <!--<script type="text/javascript" src="./js/slick_control.js"></script>-->
 </head>
 
 <script>
@@ -133,10 +138,34 @@
     
     <div class="ribbon">
         <p>“사용자에게 더 가까운 덴모빌리가<br>되기 위해 노력합니다.”</p>
-        <ul>
+        <ul class="sub_ribbon">
             <li><a href="https://smartstore.naver.com/denmobili">네이버 스토어로 가기</a></li>
             <li><a href="/about.html">오프라인 매장 가기</a></li><!--location로 scroll down-->
         </ul>
+    </div>
+    
+    <!--product detail-->
+    <div class="detail_wrap">
+        <div class="fix">
+            <div class="inner_wrap">
+                <div class="media_flow">
+                    <ul class="sides left">
+                        <li><img src="./img/product_detail/1/1.png"></li>
+                        <li><img src="./img/product_detail/1/2.png"></li>
+                        <li><img src="./img/product_detail/1/3.png"></li>
+                        <li><img src="./img/product_detail/1/4.png"></li>
+                        <li><img src="./img/product_detail/1/5.png"></li>
+                    </ul>
+                </div>
+                <div class="sides right">
+                    <span></span>
+                    <h3>Tammy</h3>
+                    <p class="notosans">아쿠아 클린 원단과 스웨이드 원단의 세련되고 아름다운 조화를 지닌 전통 이태리 디자인 소파입니다.</p>
+                    <div class="buy_btn notosans"><a href="https://smartstore.naver.com/denmobili" target="_blank">상품 구매 하기</a></div>
+                </div>
+                <div class="close_btn"></div>
+            </div>
+        </div>
     </div>
     
     <div include-html="footer.html"></div>

@@ -43,11 +43,10 @@
 /*더보기 button*/
 .wrap .section .more_btn{width:240px; border:1px solid rgba(150,150,150,0.5); margin:60px auto 80px auto;}
 .wrap .section .more_btn a{display:block; font-size:24px; font-weight:500; padding:22px 0; text-align:center;}
-.wrap .section .more_btn a:hover{color:#fff; background:rgba(50,50,50,1);}
 /*detail section*/
 /*section1:Den Mobili*/
 .wrap .section1 h3{padding-bottom:16px;}
-.wrap .section1 ul li{float:left; height:320px;}
+.wrap .section1 ul li{float:left; height:320px; text-indent:-9999px;}
 .wrap .section1 ul li:nth-child(1){width:39.5%; background:rgba(230,230,230,1);}
 .wrap .section1 ul li:nth-child(1) img{width:80%; display:block; margin:0 auto; margin-top:137px;}
 .wrap .section1 ul li:nth-child(2){float:right; width:57.25%; background:rgba(230,230,230,1); background-image:url(../img/landing/landing2.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
@@ -61,11 +60,11 @@
 /*section2 insert img*/
 .wrap .section2 ul li:nth-child(1){background-image:url(../img/landing/mat1_bg.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
 .wrap .section2 ul li:nth-child(1) .mat_logo{width:178px; height:118px; background-image:url(../img/landing/mat1_logo.png); margin-left:-89px;}
-.wrap .section2 ul li:nth-child(2){background-image:url(../img/landing/mat1_bg.png);}
+.wrap .section2 ul li:nth-child(2){background-image:url(../img/landing/mat2_bg.png);}
 .wrap .section2 ul li:nth-child(2) .mat_logo{width:192px; height:50px; background-image:url(../img/landing/mat2_logo.png); margin-left:-96px;}
-.wrap .section2 ul li:nth-child(3){background-image:url(../img/landing/mat1_bg.png);}
+.wrap .section2 ul li:nth-child(3){background-image:url(../img/landing/mat3_bg.png);}
 .wrap .section2 ul li:nth-child(3) .mat_logo{width:222px; height:66px; background-image:url(../img/landing/mat3_logo.png); margin-left:-111px;}
-.wrap .section2 ul li:nth-child(4){background-image:url(../img/landing/mat1_bg.png);}
+.wrap .section2 ul li:nth-child(4){background-image:url(../img/landing/mat4_bg.png);}
 .wrap .section2 ul li:nth-child(4) .mat_logo{width:158px; height:66px; background-image:url(../img/landing/mat4_logo.png); margin-left:-79px;}
 /*section2:자세히보기*/
 .wrap .section2 ul li .detail{width:122px; position:absolute; bottom:50px; left:50%; margin-left:-61px; font-size:20px; line-height:20px; color:#fff; font-family: 'Noto Sans KR', sans-serif; text-align:left; opacity:0;}
@@ -89,8 +88,8 @@
 
 /*news wrap*/
 .ribbon .news_wrap{width:1240px; margin:0 auto; overflow-x:hidden; position:relative;}
-.ribbon ul{width:200%;}
-.ribbon ul li{float:left; width:50%; height:32px; animation:ribbons 15s infinite linear; background-image:url(../img/landing/news.png); background-repeat:no-repeat; background-size:contain; opacity:0.6; text-indent:-9999px;}
+.ribbon ul.news_logo{width:200%;}
+.ribbon ul.news_logo li{float:left; width:50%; height:32px; animation:ribbons 15s infinite linear; background-image:url(../img/landing/news.png); background-repeat:no-repeat; background-size:contain; opacity:0.6; text-indent:-9999px;}
 
 .ribbon .news_wrap .gradient{width:120px; height:32px; background-image:linear-gradient(to right, rgba(250,250,250,1), rgba(250,250,250,0));position:absolute; top:0; left:0; z-index:2;}
 .ribbon .news_wrap .gradient2{left:100%; margin-left:-120px; transform:rotate(180deg);}
@@ -209,11 +208,16 @@
     /*section2:Material*/
     .wrap .section2 ul li{float:none; width:100%; height:140px; margin-right:0%; margin-bottom:10px;}
     .wrap .section2 ul li:nth-child(4){margin-bottom:0;}
-    /*section2 insert img*/
+    /*section2 insert img : logo*/
     .wrap .section2 ul li:nth-child(1) .mat_logo{width:124px; height:82px; margin-left:-62px; bottom:28px;}
     .wrap .section2 ul li:nth-child(2) .mat_logo{width:138px; height:36px; margin-left:-69px; bottom:53px;}
     .wrap .section2 ul li:nth-child(3) .mat_logo{width:154px; height:46px; margin-left:-77px; bottom:47px;}
     .wrap .section2 ul li:nth-child(4) .mat_logo{width:101px; height:40px; margin-left:-50.5px; bottom:48px;}
+    /*section2 insert img : bg*/
+    .wrap .section2 ul li:nth-child(1){background-image:url(../img/landing/mat1_bg_m.png);}
+    .wrap .section2 ul li:nth-child(2){background-image:url(../img/landing/mat2_bg_m.png);}
+    .wrap .section2 ul li:nth-child(3){background-image:url(../img/landing/mat3_bg_m.png);}
+    .wrap .section2 ul li:nth-child(4){background-image:url(../img/landing/mat4_bg_m.png);}
 
     /*section3:Product*/
     .wrap .section3 ul li{height:253px;}

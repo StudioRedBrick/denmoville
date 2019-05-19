@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/*sections*/
+.wrap .section{padding-top:80px;}
+.wrap .section h3{font-family:'Montserrat'; font-weight:600; font-size:64px; padding-bottom:20px; line-height:1;}
+.wrap .section .txt{padding-bottom:60px;}
+.align_center{text-align:center; padding:60px 0 80px 0;}
+
+/*section1:Craftmanship*/
+.wrap .section1 ul li{float:left; height:400px;}
+.wrap .section1 ul li:nth-child(1){width:37.09%; background:rgba(230,230,230,1); background-image:url(../img/about/about1.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
+.wrap .section1 ul li:nth-child(2){float:right; width:59.67%; background:rgba(230,230,230,1); background-image:url(../img/about/about2.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
+.wrap .section1 ul:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*seciton2:Location*/
+.wrap .section2 h3{text-align:center; padding-bottom:10px;}
+.wrap .section2 .subtitle{text-align:center; font-family: 'Noto Sans KR', sans-serif; font-size:16px;}
+.wrap .section2 .subtitle span{font-weight:bold; padding-right:10px;}
+.wrap .section2 .map_wrap{padding:60px 0 30px 0;}
+.wrap .section2 .map_wrap .map{width:600px; float:left;}
+.wrap .section2 .map_wrap .map2{float:right;}
+.wrap .section2 .map_wrap .map p{font-size:24px; font-weight:bold; padding-bottom:16px;}
+.wrap .section2 .map_wrap .map .mapbox{height:260px; margin-bottom:30px; background:rgba(0,0,0,0.1);}
+.wrap .section2 .map_wrap .map ul.addrs{border-top:1px solid #969696;}
+.wrap .section2 .map_wrap .map ul li{float:left; font-size:20px; line-height:1.5; padding:20px 0; border-bottom:1px solid #e6e6e6;}
+.wrap .section2 .map_wrap .map ul li:nth-child(1){font-weight:bold; width:17%;}
+.wrap .section2 .map_wrap .map ul li:nth-child(2){width:83%;}
+.wrap .section2 .map_wrap:after{content:""; display:block; clear:both;}/*clearfix*/
+.wrap .section2 .map_wrap .map ul:after{content:""; display:block; clear:both;}/*clearfix*/
+
+/*ribbon*/
+.ribbon{background-image:url(../img/ribbon_3.png);}
+.ribbon ul{width:610px;}
+.ribbon ul li{float:left; width:49.18%;}
+.ribbon ul li:nth-child(2){float:right;}
+.ribbon p{padding:80px 0 40px 0;}
+.ribbon ul:after{content:""; display:block; clear:both;}/*clearfix*/
+
+
+/*detail media query*/
+@media screen and (max-width:1024px){
+    /*section2:Location*/
+    .wrap .section2 .map_wrap .map{width:432px;}
+    .wrap .section2 .map_wrap .map .mapbox{height:187px;}
+}
+
+@media screen and (max-width:768px){
+    
+    /*sections*/
+    .notosans{font-size:20px;}
+    .wrap .section{padding-top:60px;}
+    .wrap .section h3{font-size:48px; padding-bottom:20px;}
+    .wrap .section .txt{padding-bottom:40px;}
+    .align_center{padding:40px 0 60px 0;}
+    .wrap .section .txt br{display:none;}
+    /*section1:Craftmanship*/
+    .wrap .section1 ul li{height:222px;}
+    
+    /*seciton2:Location*/
+    .wrap .section2 h3{padding-bottom:10px;}
+    .wrap .section2 .subtitle{font-size:14px;}
+    .wrap .section2 .map_wrap .map p{font-size:20px; padding-bottom:15px;}
+    .wrap .section2 .map_wrap .map{width:48.54%;}
+    .wrap .section2 .map_wrap .map .mapbox{height:145px; margin-bottom:20px;}
+    .wrap .section2 .map_wrap .map ul li{font-size:16px; padding:18px 0;}
+    .wrap .section2 .map_wrap{padding:40px 0 10px 0;}
+    
+    /*ribbon*/
+    .ribbon ul{width:550px;}
+    .ribbon p{padding:60px 0 30px 0;}
+}
+
+@media screen and (max-width:415px){
+    
+    /*sections*/
+    .notosans{font-size:16px;}
+    .wrap .section{padding-top:40px;}
+    .wrap .section h3{font-size:32px; padding-bottom:10px;}
+    .wrap .section .txt{padding-bottom:30px;}
+    .align_center{padding:30px 0 40px 0; text-align:left;}
+    .align_center br{display:none;}
+    /*section1:Craftmanship*/
+    .wrap .section1 ul li{height:140px;}
+    .wrap .section1 ul li:nth-child(1){width:57.5%; position:relative; z-index:2;}
+    .wrap .section1 ul li:nth-child(2){float:right; width:92.5%; margin-top:-30px; position:relative; z-index:0;}
+    /*seciton2:Location*/
+    .wrap .section2 h3{padding-bottom:4px;}
+    .wrap .section2 .map_wrap .map p{font-size:16px; padding-bottom:12px;}
+    .wrap .section2 .map_wrap .map{width:100%;}
+    .wrap .section2 .map_wrap .map .mapbox{height:140px; margin-bottom:14px;}
+    .wrap .section2 .map_wrap .map ul li{font-size:14px; padding:14px 0;}
+    .wrap .section2 .map_wrap{padding:30px 0 0px 0;}
+    .wrap .section2 .map2{margin-top:30px;}
+    
+    
+
+    /*ribbon*/
+    .ribbon ul{width:87.5%;}
+    .ribbon ul li{float:none;}
+    .ribbon ul li:nth-child(2){float:none; margin-top:10px;}
+    .ribbon p{padding:40px 0 30px 0;}
+}

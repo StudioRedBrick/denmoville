@@ -2,6 +2,7 @@ $(document).ready(function(){
     gnbCss();
     hamMenu();
     subBannerLoad();
+    ribbonHover();
 }); //document ready END 
 
 function gnbCss(){
@@ -94,5 +95,16 @@ function getUrl(){
 function subBannerLoad(){
     $(document).ready(function(){
         $(".sub_banner").animate({"opacity":"1"},600);
+    });
+}
+
+function ribbonHover(){
+    $(".ribbon ul.sub_ribbon li").on('mouseenter',function(){
+        $(this).stop().animate({"backgroundColor":"rgba(255,255,255,1)"},200);   
+        $(this).children('a').stop().animate({"color":"rgba(50,50,50,1)"},200);   
+    });
+    $(".ribbon ul.sub_ribbon li").on('mouseleave',function(){
+        $(this).stop().animate({"backgroundColor":"rgba(255,255,255,0)"},200);   
+        $(this).children('a').stop().animate({"color":"rgba(255,255,255,1)"},200);   
     });
 }
