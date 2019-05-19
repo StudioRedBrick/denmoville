@@ -31,7 +31,7 @@
 .see_more p span{display:block; width:24px; height:24px; position:absolute; top:2px; right:0; background-image:url(../img/icon/seemore_icon.png); background-repeat:no-repeat; background-size:cover;}
 
 /*ribbon*/
-.ribbon{background-image:url(../img/ribbon_2.png);}
+.ribbon{background-image:url(../img/ribbon_1.png);}
 .ribbon ul{width:610px;}
 .ribbon ul li{float:left; width:49.18%;}
 .ribbon ul li:nth-child(2){float:right;}
