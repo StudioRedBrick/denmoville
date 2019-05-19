@@ -44,7 +44,7 @@
     .detail_wrap .fix .inner_wrap{width:100%; height:100vh;}
     .detail_wrap .fix .inner_wrap .sides{float:none;}
     
-    .detail_wrap .fix .inner_wrap .media_flow{overflow-x:scroll;}
+    .detail_wrap .fix .inner_wrap .media_flow{overflow-x:scroll; -webkit-touch-overflow:scroll;}
     /*scroll css*/
     .media_flow::-webkit-scrollbar{
         width:0;
