@@ -13,6 +13,5 @@ $(document).ready(function(){
         slideshowSpeed:5000,
         controlNav:true,
         directionNav:false,
-        smoothHeight:false
     });
 }); //document ready END 
