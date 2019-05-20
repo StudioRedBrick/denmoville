@@ -34,7 +34,7 @@ function openDetail(){
         
         $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: '../img/product_detail/'+folderName+'/',
+            url: '/img/product_detail/'+folderName+'/',
             success: function (data) {
                //List all png or jpg or gif file names in the page
                $(data).find("a:contains(" + fileExt1 + ")").each(function () {
@@ -58,7 +58,6 @@ function openDetail(){
             }
 
             var getLength = $(".detail_wrap .fix .inner_wrap .left li").find('img').length;
-                console.log("getLength"+getLength);
 
             if(window.matchMedia("(min-width: 416px) and (max-width: 768px)").matches){
                 widthVal = getLength*562;
