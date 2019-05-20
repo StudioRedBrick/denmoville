@@ -35,14 +35,15 @@ function openDetail(){
         $(".detail_wrap .fix .inner_wrap .right h3").append(folderName);
         
         console.log(finfolderName);
-        
+
         $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: '/img/product_detail/'+finfolderName+'/',
+            url: '34.85.120.42/img/product_detail/'+finfolderName+'/',
             success: function (data) {
                //List all png or jpg or gif file names in the page
                $(data).find("a:contains(" + fileExt1 + ")").each(function () {
                    var filename = this.href.replace(window.location.host, "").replace("http:///", "");
+                   console.log(filename);
                    
                    $(".detail_wrap .fix .inner_wrap .left").append( "<li></li>");
                });
