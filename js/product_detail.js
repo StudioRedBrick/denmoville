@@ -37,7 +37,7 @@ function openDetail(){
 
         $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: '/img/product_detail/'+finfolderName+'/1.png',
+            url: '/img/product_detail/'+finfolderName+'/',
             success: function (data) {
                //List all png or jpg or gif file names in the page
                $(data).find("a:contains(" + fileExt1 + ")").each(function () {
