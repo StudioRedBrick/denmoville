@@ -64,7 +64,7 @@ function hamMenu(){
     });
 */
     //close hamburger menu
-    $(".ham_wrap .ham_header li:nth-child(2)").off('click').on('click', function(){
+    $(".ham_wrap .ham_header li:nth-child(2)").on('click', function(){
         $(".ham_wrap").animate({"left":"-100vw"},200,'swing');
     });
 }
