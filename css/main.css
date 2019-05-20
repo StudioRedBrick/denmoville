@@ -57,6 +57,7 @@
         
         /*ribbon*/
         .ribbon{height:269px;}
+        .main_ribbon{height:199px;}
         .ribbon p{font-size:20px; line-height:33px;}
         .ribbon ul.sub_ribbon li{font-size:20px;}
         .ribbon ul.sub_ribbon li a{padding:17px 0 14px 0;}
@@ -72,6 +73,7 @@
         
         /*ribbon*/
         .ribbon{height:288px;}
+        .main_ribbon{height:208px;}
         .ribbon p{font-size:16px; line-height:1.5;}
         .ribbon ul.sub_ribbon li{font-size:16px; width:100%;}
         .ribbon ul.sub_ribbon li a{padding:20px 0 17px 0;}

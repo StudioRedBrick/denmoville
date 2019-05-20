@@ -232,6 +232,7 @@
     .ribbon p{width:87.5%; margin:0 auto;}
     .ribbon p br{display:none;}
     .ribbon .news_wrap{width:87.5%;}
+    .ribbon ul.news_logo{width:400%;}
     .ribbon ul{width:400%;}
     .ribbon .news_wrap .gradient{width:30px; height:32px;}
     .ribbon .news_wrap .gradient2{left:100%; margin-left:-30px;}
