@@ -30,11 +30,15 @@ function openDetail(){
         $(".wrap").css({"display":"none"});
         
         var folderName = $(this).text();
+        var finfolderName = folderName.replace(/\s+/g,'_');
+        
         $(".detail_wrap .fix .inner_wrap .right h3").append(folderName);
+        
+        console.log(finfolderName);
         
         $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: '/img/product_detail/'+folderName+'/',
+            url: '/img/product_detail/'+finfolderName+'/',
             success: function (data) {
                //List all png or jpg or gif file names in the page
                $(data).find("a:contains(" + fileExt1 + ")").each(function () {
@@ -51,7 +55,7 @@ function openDetail(){
         
         function setWidth(elLength){
             for(var i=1; i<elLength+1; i++){
-                var $imgSrc = "./img/product_detail/"+folderName+"/"+i+".png";
+                var $imgSrc = "./img/product_detail/"+finfolderName+"/"+i+".png";
 
                 $(".detail_wrap .fix .inner_wrap .left li:nth-child("+i+") ").append('<img src="">');
                 $(".detail_wrap .fix .inner_wrap .left li:nth-child("+i+") img").attr('src',$imgSrc);
