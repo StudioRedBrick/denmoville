@@ -18,7 +18,7 @@
 
 /*product*/
 .wrap .product_wrap{width:100%;}
-.wrap .product_wrap li{width:600px; height:450px; float:left; background:green; position:relative; margin-bottom:96px; cursor:pointer; opacity:0.9;}
+.wrap .product_wrap li{width:600px; height:450px; float:left; position:relative; margin-bottom:96px; cursor:pointer; opacity:0.9;}
 .wrap .product_wrap li:nth-child(even){float:right;}
 .wrap .product_wrap li:hover{opacity:1;}
 /*product name*/

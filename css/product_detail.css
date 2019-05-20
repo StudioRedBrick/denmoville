@@ -24,7 +24,7 @@
 
 .detail_wrap .fix .inner_wrap .right{width:380px; padding:100px 0 100px 0; margin-left:60px; position:relative;}
 .detail_wrap .fix .inner_wrap .right span{display:block; margin-bottom:40px; width:100px; height:2px; background:#323232;}
-.detail_wrap .fix .inner_wrap .right h3{font-size:64px; line-height:1; font-weight:600; letter-spacing:-2.5px; padding-bottom:20px;}
+.detail_wrap .fix .inner_wrap .right h3{font-size:60px; line-height:1.1; font-weight:600; letter-spacing:-1.6px; padding-bottom:20px;}
 .detail_wrap .fix .inner_wrap .right .buy_btn{width:100%; text-align:center; padding:22px 0; border:1px solid #969696; cursor:pointer; position:absolute; right:0; bottom:100px;}
 
 /*close button*/
@@ -38,6 +38,7 @@
     .detail_wrap .fix .inner_wrap .left{width:542px; padding: 100px 0 100px 60px; height:0px;}
     .detail_wrap .fix .inner_wrap .right{width:302px;}
     .detail_wrap .fix .inner_wrap .right p{font-size:20px;}
+    .detail_wrap .fix .inner_wrap .right h3{font-size:45px;}
 }
 
 @media screen and (max-width:768px){
@@ -56,14 +57,14 @@
       background:rgba(255,255,255,0) !important; /*manage scrollbar thumb background color here*/
     }
     
-    .detail_wrap .fix .inner_wrap .left{width:0; padding:100px 40px 0 40px; overflow-y:none;}
+    .detail_wrap .fix .inner_wrap .left{padding:100px 40px 0 40px; overflow-y:none;}
     .detail_wrap .fix .inner_wrap .left li{margin-bottom:0px; margin-right:20px; float:left;}
     .detail_wrap .fix .inner_wrap .left li:nth-last-child(1){margin-bottom:0px; margin-right:0;}
     .detail_wrap .fix .inner_wrap .left li img{width:542px;}
     
     .detail_wrap .fix .inner_wrap .right{width:100%; padding:40px 40px 0 40px; margin-left:0px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; position:static;}
     .detail_wrap .fix .inner_wrap .right span{margin-bottom:30px;}
-    .detail_wrap .fix .inner_wrap .right h3{font-size:48px; padding-bottom:16px;}
+    .detail_wrap .fix .inner_wrap .right h3{font-size:44px; padding-bottom:16px;}
     .detail_wrap .fix .inner_wrap .right .buy_btn{padding:28px 0; bottom:0px; border:none; border-top:1px solid #969696;}
     
     .detail_wrap .fix .inner_wrap .left:after{content:""; display:block; clear:both;}/*clearfix*/
