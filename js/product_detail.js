@@ -2,6 +2,7 @@ $(document).ready(function(){
     modalHeight();
     openDetail();
     closeDetail();
+    directUrl();
 }); //document ready END 
 
 function modalHeight(){
@@ -78,4 +79,10 @@ function closeDetail(){
         $(".detail_wrap .fix .inner_wrap .left li").remove();
         $(".detail_wrap .fix .inner_wrap .right h3").empty();
     });
+}
+
+function directUrl(){
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    console.log(dir);
 }
