@@ -1,9 +1,8 @@
 $(document).ready(function(){ 
     gnbCss();
-    hamMenu();
+    //hamMenu();
     subBannerLoad();
     ribbonHover();
-    //openHam();
 }); //document ready END 
 
 function gnbCss(){
@@ -65,12 +64,16 @@ function hamMenu(){
 */
     //close hamburger menu
     $(".ham_wrap .ham_header li:nth-child(2)").on('click', function(){
-        $(".ham_wrap").animate({"left":"-100vw"},200,'swing');
+        
     });
 }
 
 function openHam(){
     $(".ham_wrap").animate({"left":"0"},200,'swing');
+}
+
+function closeHam(){
+    $(".ham_wrap").animate({"left":"-100vw"},200,'swing');
 }
 
 function getUrl(){
