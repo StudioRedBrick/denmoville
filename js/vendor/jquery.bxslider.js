@@ -27,7 +27,7 @@
     video: false,
     useCSS: true,
     preloadImages: 'visible',
-    responsive: false,
+    responsive: true,
     slideZIndex: 50,
     wrapperClass: 'bx-wrapper',
 
