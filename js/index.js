@@ -7,14 +7,19 @@ $(document).ready(function(){
 }); //document ready END 
 
 function moreBtn(){
-    $(".wrap .section .more_btn").on('mouseenter',function(){
-        $(".wrap .section .more_btn a").stop().animate({"color":"rgba(255,255,255,1)"},200);
-        $(".wrap .section .more_btn").stop().animate({"backgroundColor":"rgba(50,50,50,1)"},200);
-    });
-    $(".wrap .section .more_btn").on('mouseleave',function(){
-        $(".wrap .section .more_btn a").stop().animate({"color":"rgba(50,50,50,1)"},200);
-        $(".wrap .section .more_btn").stop().animate({"backgroundColor":"rgba(255,255,255,1)"},200);
-    });
+    
+    if (window.matchMedia("(max-width: 768px)").matches) {
+
+    }else{
+        $(".wrap .section .more_btn").on('mouseenter',function(){
+            $(".wrap .section .more_btn a").stop().animate({"color":"rgba(255,255,255,1)"},200);
+            $(".wrap .section .more_btn").stop().animate({"backgroundColor":"rgba(50,50,50,1)"},200);
+        });
+        $(".wrap .section .more_btn").on('mouseleave',function(){
+            $(".wrap .section .more_btn a").stop().animate({"color":"rgba(50,50,50,1)"},200);
+            $(".wrap .section .more_btn").stop().animate({"backgroundColor":"rgba(255,255,255,1)"},200);
+        });
+    }
 }
 
 function checkBanner(){
