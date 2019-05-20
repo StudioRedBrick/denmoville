@@ -157,8 +157,8 @@
         if (touch && slider.vars.touch) { methods.touch(); }
 
         // FADE&&SMOOTHHEIGHT || SLIDE:
-          /*
-        if (!fade || (fade && slider.vars.smoothHeight)) { $(window).bind("resize orientationchange focus", methods.resize); }*/
+        
+        if (!fade || (fade && slider.vars.smoothHeight)) { $(window).bind("resize orientationchange focus", methods.resize); }
 
         slider.find("img").attr("draggable", "false");
 
@@ -845,7 +845,9 @@
           }
         }
         // SMOOTH HEIGHT:
+        
         if (slider.vars.smoothHeight) { methods.smoothHeight(slider.vars.animationSpeed); }
+        
       }
     };
     slider.wrapup = function(dimension) {
