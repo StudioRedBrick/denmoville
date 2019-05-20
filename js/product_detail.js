@@ -2,7 +2,6 @@ $(document).ready(function(){
     modalHeight();
     openDetail();
     closeDetail();
-    directUrl();
 }); //document ready END 
 
 function modalHeight(){
@@ -38,7 +37,7 @@ function openDetail(){
 
         $.ajax({
             //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: '/img/product_detail/'+finfolderName,
+            url: '/img/product_detail/'+finfolderName+'/',
             success: function (data) {
                //List all png or jpg or gif file names in the page
                $(data).find("a:contains(" + fileExt1 + ")").each(function () {
@@ -84,10 +83,4 @@ function closeDetail(){
         $(".detail_wrap .fix .inner_wrap .left li").remove();
         $(".detail_wrap .fix .inner_wrap .right h3").empty();
     });
-}
-
-function directUrl(){
-    var loc = window.location.pathname;
-    var dir = loc.substring(0, loc.lastIndexOf('/'));
-    console.log(dir);
 }
