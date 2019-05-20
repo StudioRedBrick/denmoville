@@ -3,6 +3,7 @@ $(document).ready(function(){
     hamMenu();
     subBannerLoad();
     ribbonHover();
+    //openHam();
 }); //document ready END 
 
 function gnbCss(){
@@ -55,14 +56,21 @@ function gnbCss(){
 
 function hamMenu(){
     //open hamburger menu
-    $(".gnb_wrap .header_m .ham_icon").on('click', function(){
+/*
+    $(".gnb_wrap .header_m .ham_icon").on('click touchstart', function(e){
+        e.preventDefault();
         console.log('jjjjj');
         $(".ham_wrap").animate({"left":"0"},200,'swing');
     });
+*/
     //close hamburger menu
     $(".ham_wrap .ham_header li:nth-child(2)").off('click').on('click', function(){
         $(".ham_wrap").animate({"left":"-100vw"},200,'swing');
     });
+}
+
+function openHam(){
+    $(".ham_wrap").animate({"left":"0"},200,'swing');
 }
 
 function getUrl(){
