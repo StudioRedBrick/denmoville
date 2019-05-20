@@ -27,7 +27,7 @@
     video: false,
     useCSS: true,
     preloadImages: 'visible',
-    responsive: true,
+    responsive: false,
     slideZIndex: 50,
     wrapperClass: 'bx-wrapper',
 
@@ -318,8 +318,7 @@
       // slider has been fully initialized
       slider.initialized = true;
       // bind the resize call to the window
-/*      if (slider.settings.responsive) { $(window).bind('resize', resizeWindow); }
-*/
+      if (slider.settings.responsive) { $(window).bind('resize', resizeWindow); }
       // if auto is true and has more than 1 page, start the show
       if (slider.settings.auto && slider.settings.autoStart && (getPagerQty() > 1 || slider.settings.autoSlideForOnePage)) { initAuto(); }
       // if ticker is true, start the ticker
@@ -1240,7 +1239,6 @@
     /**
      * Window resize event callback
      */
-/*
     var resizeWindow = function(e) {
       // don't do anything if slider isn't initialized.
       if (!slider.initialized) { return; }
@@ -1265,7 +1263,7 @@
         }
       }
     };
-*/
+
     /**
      * Adds an aria-hidden=true attribute to each element
      *
@@ -1581,9 +1579,7 @@
       $('.bx-caption', this).remove();
       if (slider.controls.autoEl) { slider.controls.autoEl.remove(); }
       clearInterval(slider.interval);
-/*
       if (slider.settings.responsive) { $(window).unbind('resize', resizeWindow); }
-*/
       if (slider.settings.keyboardEnabled) { $(document).unbind('keydown', keyPress); }
       //remove self reference in data
       $(this).removeData('bxSlider');
