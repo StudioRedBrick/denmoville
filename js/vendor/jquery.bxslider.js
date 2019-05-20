@@ -1240,6 +1240,7 @@
     /**
      * Window resize event callback
      */
+/*
     var resizeWindow = function(e) {
       // don't do anything if slider isn't initialized.
       if (!slider.initialized) { return; }
@@ -1264,7 +1265,7 @@
         }
       }
     };
-
+*/
     /**
      * Adds an aria-hidden=true attribute to each element
      *
