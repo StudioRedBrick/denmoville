@@ -318,7 +318,8 @@
       // slider has been fully initialized
       slider.initialized = true;
       // bind the resize call to the window
-      if (slider.settings.responsive) { $(window).bind('resize', resizeWindow); }
+/*      if (slider.settings.responsive) { $(window).bind('resize', resizeWindow); }
+*/
       // if auto is true and has more than 1 page, start the show
       if (slider.settings.auto && slider.settings.autoStart && (getPagerQty() > 1 || slider.settings.autoSlideForOnePage)) { initAuto(); }
       // if ticker is true, start the ticker
@@ -1579,7 +1580,9 @@
       $('.bx-caption', this).remove();
       if (slider.controls.autoEl) { slider.controls.autoEl.remove(); }
       clearInterval(slider.interval);
+/*
       if (slider.settings.responsive) { $(window).unbind('resize', resizeWindow); }
+*/
       if (slider.settings.keyboardEnabled) { $(document).unbind('keydown', keyPress); }
       //remove self reference in data
       $(this).removeData('bxSlider');
