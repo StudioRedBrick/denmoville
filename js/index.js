@@ -101,18 +101,22 @@ function bxSlider(){
 function matHover(){
     $(".wrap .section2 ul li").on('mouseenter', function(){
         var i = $(this).index()+1;
+        //this change opacity
+        $(this).animate({"opacity":"1"},300);
         //logo position change
-        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"100px"},200);
+        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"125px"},300);
         //detail button position change
-        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"70px","opacity":"1"},200);
+        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"70px","opacity":"1"},300);
     });
 
     $(".wrap .section2 ul li").on('mouseleave', function(){
         var i = $(this).index()+1;
+        //this change opacity
+        $(this).animate({"opacity":"0.9"},300);
         //logo position change
-        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"80px"},200);
+        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"80px"},300);
         //detail button position change
-        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"50px","opacity":"0"},200);
+        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"50px","opacity":"0"},300);
     });    
 }
 

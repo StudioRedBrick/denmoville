@@ -7,7 +7,7 @@
 .align_center{text-align:center; padding:60px 0 80px 0;}
 
 /*section1:Craftmanship*/
-.wrap .section1 ul li{float:left; height:400px;}
+.wrap .section1 ul li{float:left; height:400px; text-indent:-9999px;}
 .wrap .section1 ul li:nth-child(1){width:37.09%; background:rgba(230,230,230,1); background-image:url(../img/about/about1.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
 .wrap .section1 ul li:nth-child(2){float:right; width:59.67%; background:rgba(230,230,230,1); background-image:url(../img/about/about2.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
 .wrap .section1 ul:after{content:""; display:block; clear:both;}/*clearfix*/

@@ -54,7 +54,7 @@
 /*section2:Material*/
 .wrap .section2 h3{text-align:center;}
 .wrap .section2 p{text-align:center;}
-.wrap .section2 ul li{float:left; width:23.79%; height:400px; background:rgba(230,230,230,1); margin-right:1.61%; position:relative; background-repeat:no-repeat; background-size:cover; background-position:center; cursor:pointer;}
+.wrap .section2 ul li{float:left; width:23.79%; height:400px; background:rgba(230,230,230,1); margin-right:1.61%; position:relative; background-repeat:no-repeat; background-size:cover; background-position:center; cursor:pointer; opacity:0.9;}
 .wrap .section2 ul li:nth-child(4){margin-right:0%;}
 .wrap .section2 ul li .mat_logo{background-repeat:no-repeat; background-size:contain; background-position:center; position:absolute; left:50%; bottom:80px;}
 /*section2 insert img*/

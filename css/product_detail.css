@@ -25,7 +25,8 @@
 .detail_wrap .fix .inner_wrap .right{width:380px; padding:100px 0 100px 0; margin-left:60px; position:relative;}
 .detail_wrap .fix .inner_wrap .right span{display:block; margin-bottom:40px; width:100px; height:2px; background:#323232;}
 .detail_wrap .fix .inner_wrap .right h3{font-size:60px; line-height:1.1; font-weight:600; letter-spacing:-1.6px; padding-bottom:20px;}
-.detail_wrap .fix .inner_wrap .right .buy_btn{width:100%; text-align:center; padding:22px 0; border:1px solid #969696; cursor:pointer; position:absolute; right:0; bottom:100px;}
+.detail_wrap .fix .inner_wrap .right .buy_btn{width:100%; border:1px solid #969696; cursor:pointer; position:absolute; right:0; bottom:100px;}
+.detail_wrap .fix .inner_wrap .right .buy_btn a{width:100%; text-align:center; padding:22px 0; display:block;}
 
 /*close button*/
 .detail_wrap .fix .inner_wrap .close_btn{width:36px; height:36px; background-image:url(../img/icon/close_btn.png); background-repeat:no-repeat; background-size:cover; background-position:center; position:absolute; right:32px; top:32px; cursor:pointer;}
