@@ -29,10 +29,7 @@
 
 /*material video*/
 .wrap .inner_wrap .mat_vid{width:100%; padding:25px 0; border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; cursor:pointer;}
-.wrap .inner_wrap .mat_vid p{width:230px; margin:0 auto; font-size:20px; color:#646464; line-height:20px;}
-.wrap .inner_wrap .mat_vid p span{width:24px; height:24px; background-image:url(../img/material/vid_icon.png); background-repeat:no-repeat; background-size:contain; display:block; float:right; margin-top:-1.5px;}
-.wrap .inner_wrap .mat_vid p a{color:#646464;}
-.wrap .inner_wrap .mat_vid p:after{content:""; display:block; clear:both;}/*clearfix*/
+.wrap .inner_wrap .mat_vid img{margin:0 auto; display:block;}
 
 /*material content*/
 .wrap .inner_wrap .mat_cnt{padding-top:60px;}

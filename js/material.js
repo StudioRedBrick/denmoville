@@ -1,7 +1,18 @@
 $(document).ready(function(){ 
     tabActive();
     video();
+    vidTitleOnLoad();
 }); //document ready END 
+
+function vidTitleOnLoad(){
+    //video
+    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-01.png');
+    //video text width for mobile
+    if (window.matchMedia("(max-width:768px)").matches){
+        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
+    }else{
+    }
+}
 
 function tabActive(){
     
@@ -119,12 +130,11 @@ function tab1Append(){
     $(".wrap .inner_wrap .mat_abt li:nth-child(2) .info").append('아쿠아클린 기술은 향상된 패브릭 보호 기술입니다. 이 공정을 통해 섬유 한올한올에 보이지 않는 분자 수준의 코팅을 하여 이물질이 섬유에 침투하는 것을 방지합니다.');
 
     //video
-    $(".wrap .inner_wrap .mat_vid p a").append('‘아쿠아클린’ 영상 보기');
+    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-01.png');
     //video text width for mobile
-    if (window.matchMedia("(max-width:415px)").matches){
-        $(".wrap .inner_wrap .mat_vid p").css({"width":"168px"});      
+    if (window.matchMedia("(max-width:768px)").matches){
+        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
     }else{
-        $(".wrap .inner_wrap .mat_vid p").css({"width":"208px"});  
     }
     
     
@@ -151,12 +161,11 @@ function tab2Append(){
     $(".wrap .inner_wrap .mat_abt li:nth-child(2) .info").append('내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다.');
 
     //video
-    $(".wrap .inner_wrap .mat_vid p a").append('‘선브렐라’ 영상 보기');
+    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-02.png');
     //video text width for mobile
-    if (window.matchMedia("(max-width:415px)").matches){
-        $(".wrap .inner_wrap .mat_vid p").css({"width":"156px"});      
+    if (window.matchMedia("(max-width:768px)").matches){
+        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
     }else{
-        $(".wrap .inner_wrap .mat_vid p").css({"width":"192px"});   
     }
     
     //cnt1
@@ -178,14 +187,12 @@ function tab3Append(){
     $(".wrap .inner_wrap .mat_abt li:nth-child(2) .info").append('내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다.');
 
     //video
-    $(".wrap .inner_wrap .mat_vid p a").append('‘라이브스마트’ 영상 보기');
+    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-03.png');
     //video text width for mobile
-    if (window.matchMedia("(max-width:415px)").matches){
-        $(".wrap .inner_wrap .mat_vid p").css({"width":"182px"});      
+    if (window.matchMedia("(max-width:768px)").matches){
+        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
     }else{
-        $(".wrap .inner_wrap .mat_vid p").css({"width":"220px"});    
     }
-    
     
     //cnt1
     $(".wrap .inner_wrap .cnt1 li .title").append('S4계절 내내 한결같은 원단');
