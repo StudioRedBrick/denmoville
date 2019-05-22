@@ -42,7 +42,7 @@
 .wrap .section .txt{padding-bottom:60px;}
 /*더보기 button*/
 .wrap .section .more_btn{width:240px; border:1px solid rgba(150,150,150,0.5); margin:60px auto 80px auto;}
-.wrap .section .more_btn a{display:block; font-size:24px; font-weight:500; padding:22px 0; text-align:center;}
+.wrap .section .more_btn a{display:block; font-size:24px; line-height:24px; font-weight:500; padding:22px 0; text-align:center;}
 /*detail section*/
 /*section1:Den Mobili*/
 .wrap .section1 h3{padding-bottom:16px;}
@@ -151,7 +151,7 @@
     .wrap .section .txt{padding-bottom:40px;}
     /*더보기 button*/
     .wrap .section .more_btn{width:200px; margin:40px auto 60px auto;}
-    .wrap .section .more_btn a{font-size:18px; padding:17px 0 16px 0;}
+    .wrap .section .more_btn a{font-size:18px; line-height:18px; padding:17px 0 16px 0;}
     /*detail section*/
     /*section1:Den Mobili*/
     .wrap .section1 h3{padding-bottom:12px;}
@@ -198,7 +198,7 @@
     .wrap .section .txt br{display:block;}
     /*더보기 button*/
     .wrap .section .more_btn{width:100%; margin:30px auto 30px auto;}
-    .wrap .section .more_btn a{font-size:16px; padding:18px 0 16px 0;}
+    .wrap .section .more_btn a{font-size:16px; line-height:16px; padding:18px 0 16px 0;}
     /*detail section*/
     /*section1:Den Mobili*/
     .wrap .section1 ul li{height:140px;}
