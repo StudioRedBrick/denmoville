@@ -38,7 +38,7 @@
     .main_ribbon p{color:rgba(50,50,50,0.5); font-weight:normal;}
     .ribbon ul{margin:0 auto;}
     .ribbon ul.sub_ribbon li{line-height:24px; text-align:center; border:1px solid rgba(255,255,255,1); font-size:24px; color:rgba(255,255,255,1); cursor:pointer;}
-    .ribbon ul.sub_ribbon li a{padding:26px 0 23px 0; color:rgba(255,255,255,1); display:block;}
+    .ribbon ul.sub_ribbon li a{padding:26px 0 23px 0; color:rgba(255,255,255,1); display:block; line-height:24px;}
     
     /*detail media query*/
     @media screen and (max-width:1024px){
@@ -59,8 +59,8 @@
         .ribbon{height:269px;}
         .main_ribbon{height:199px;}
         .ribbon p{font-size:20px; line-height:33px;}
-        .ribbon ul.sub_ribbon li{font-size:20px;}
-        .ribbon ul.sub_ribbon li a{padding:17px 0 14px 0;}
+        .ribbon ul.sub_ribbon li{font-size:20px; line-height:20px;}
+        .ribbon ul.sub_ribbon li a{padding:17px 0 14px 0; line-height:20px;}
     }
     
     @media screen and (max-width:415px){
@@ -75,6 +75,6 @@
         .ribbon{height:288px;}
         .main_ribbon{height:208px;}
         .ribbon p{font-size:16px; line-height:1.5;}
-        .ribbon ul.sub_ribbon li{font-size:16px; width:100%;}
-        .ribbon ul.sub_ribbon li a{padding:20px 0 17px 0;}
+        .ribbon ul.sub_ribbon li{font-size:16px; width:100%; line-height:16px;}
+        .ribbon ul.sub_ribbon li a{padding:20px 0 17px 0; line-height:16px;}
     }
