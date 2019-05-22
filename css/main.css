@@ -37,7 +37,7 @@
     .ribbon p{font-size:24px; line-height:1.5; font-weight:bold; text-align:center; color:rgba(255,255,255,1);}
     .main_ribbon p{color:rgba(50,50,50,0.5); font-weight:normal;}
     .ribbon ul{margin:0 auto;}
-    .ribbon ul.sub_ribbon li{text-align:center; border:1px solid rgba(255,255,255,1); font-size:24px; color:rgba(255,255,255,1); cursor:pointer;}
+    .ribbon ul.sub_ribbon li{line-height:24px; text-align:center; border:1px solid rgba(255,255,255,1); font-size:24px; color:rgba(255,255,255,1); cursor:pointer;}
     .ribbon ul.sub_ribbon li a{padding:26px 0 23px 0; color:rgba(255,255,255,1); display:block;}
     
     /*detail media query*/
