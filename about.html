@@ -76,13 +76,44 @@
             <p class="notosans align_center">“고객이 주문한 즉시, 국내 최고의 장인이 제작을 시작합니다. <br>꼼꼼한 원단 선별부터 검수까지 퀄리티를 놓치지 않는 덴모빌리를 만나보세요”</p>
         </div>
         
+        <script>
+            function initMap(){
+                var myLatLng = {lat: 37.499933, lng: 127.034319};
+                var myLatLng2 = {lat: 37.499933, lng: 127.034319};
+
+                var map = new google.maps.Map(document.getElementById('map'),{
+                    zoom:15,
+                    center: myLatLng
+                });
+
+                var map2 = new google.maps.Map(document.getElementById('map2'),{
+                    zoom:15,
+                    center: myLatLng
+                });
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title : Denmobilli
+                });
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng2,
+                    map: map2,
+                    title : Denmobilli
+                });
+            }
+        </script> 
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6OxHcdAAlbuK3xWX5QQ5VQjjPfKSdgmU&callback=initMap" async defer></script>
+        
         <div class="section section2">
             <h3>Location</h3>
             <p class="subtitle"><span>영업시간</span>10:00 ~ 19:00(주말 동일)</p>
             <div class="map_wrap">
                 <div class="map">
                     <p>하남</p>
-                    <div class="mapbox mapbox1">map box</div>
+                    <div class="mapbox" id="map">map box</div>
                     <ul class="addrs">
                         <li>주소</li>
                         <li>경기 하남시 산곡동로 81</li>
@@ -94,7 +125,7 @@
                 </div>
                 <div class="map map2">
                     <p>일산</p>
-                    <div class="mapbox">map box</div>
+                    <div class="mapbox" id="map2">map box</div>
                     <ul class="addrs">
                         <li>주소</li>
                         <li>경기 하남시 산곡동로 81</li>
@@ -105,25 +136,6 @@
                     </ul>
                 </div>
             </div>
-            
-            <script>
-              var map;
-              function initMap() {
-
-                var locationRio = {lat: 37.499933, lng: 127.034319};
-                var map = new google.maps.Map(document.getElementsByClassName('mapbox1'), {
-                  zoom: 17,
-                  center: locationRio,
-                  gestureHandling: 'cooperative'
-                });
-                var marker = new google.maps.Marker({
-                  position: locationRio,
-                  map: map,
-                  title: 'Denmobilli'
-                });
-              }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6OxHcdAAlbuK3xWX5QQ5VQjjPfKSdgmU&callback=initMap" async defer></script>
         </div>
     </div>
     
