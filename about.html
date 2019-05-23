@@ -105,6 +105,25 @@
                     </ul>
                 </div>
             </div>
+            
+            <script>
+              var map;
+              function initMap() {
+
+                var locationRio = {lat: 37.499933, lng: 127.034319};
+                var map = new google.maps.Map(document.getElementsByClassName('.mapbox'), {
+                  zoom: 17,
+                  center: locationRio,
+                  gestureHandling: 'cooperative'
+                });
+                var marker = new google.maps.Marker({
+                  position: locationRio,
+                  map: map,
+                  title: 'Denmobilli'
+                });
+              }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6OxHcdAAlbuK3xWX5QQ5VQjjPfKSdgmU&callback=initMap" async defer></script>
         </div>
     </div>
     
