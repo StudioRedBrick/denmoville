@@ -80,7 +80,7 @@
 /*section3:Product*/
 .wrap .section3 h3{text-align:center;}
 .wrap .section3 p{text-align:center;}
-.wrap .section3 ul li{background:rgba(230,230,230,1); height:360px; margin-right:20px;}
+.wrap .section3 ul li{background:rgba(230,230,230,1); height:360px; margin-right:20px; cursor:pointer;}
 
 /*bridge*/
 .wrap .bridge{padding:80px 0;}
