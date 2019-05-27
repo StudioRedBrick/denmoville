@@ -17,7 +17,7 @@ function vidTitleOnLoad(){
 function tabActive(){
     
     var cookVal = $.cookie("mat");
-    console.log(cookVal);
+    //console.log(cookVal);
     
     cntReset();
     
@@ -47,6 +47,13 @@ function tabActive(){
             //cnt1 padding top on mobile = 40 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
+            
+            //tab border css
+            $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696"});
+            $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696","border-left":"none"});
+            $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696","border-top":"none"});
+            $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696","border-top":"none","border-left":"none"}); 
+            
         }else{
             //cnt1 padding top on pc = 60 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
@@ -81,6 +88,13 @@ function tabActive(){
             //cnt1 padding top on mobile = 40 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
+            
+            //tab border css
+            $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696"});
+            $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696","border-right":"none"});
+            $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696","border-top":"none"});
+            $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696","border-top":"none","border-left":"none"});
+
         }else{
             //cnt1 padding top on pc = 60 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
@@ -114,6 +128,12 @@ function tabActive(){
             //cnt1 padding top on mobile = 40 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
+            
+            //tab border css
+            $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696"});
+            $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696","border-bottom":"none"});
+            $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696","border-left":"none","border-bottom":"none"});
+            $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696","border-left":"none"});   
         }else{
             //cnt1 padding top on pc = 60 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
@@ -147,6 +167,12 @@ function tabActive(){
             //cnt1 padding top on mobile = 0 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"0px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
+            
+            //tab border css
+            $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696"});
+            $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696","border-bottom":"none"});
+            $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696","border-left":"none","border-bottom":"none"});
+            $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696","border-right":"none"}); 
         }else{
             //cnt1 padding top on pc = 20 due to video display block
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"20px"});
@@ -195,7 +221,7 @@ function tabActive(){
         
         //get index
         var i = $(this).index()+1;
-        console.log(i);
+        //console.log(i);
 
         if(window.matchMedia("(max-width:415px)").matches){
             //tab active different in mobile
@@ -454,13 +480,13 @@ function vidTop(){
     
     //change close button position on tablet and mobile
     if (window.matchMedia("(max-width:768px)").matches){
-        console.log('tabler');
+
         $(".video_wrap .blanket .inner_wrap .close_btn").css({"top":-value+30});          
     }
 }
 
 function checkCookie(){
     var result = $.cookie("mat");
-    console.log(result);
+    //console.log(result);
     
 }
