@@ -135,9 +135,10 @@ function embedCookie(){
     $('.wrap .section2 ul li').on('click',function(){
         var cookieVal = $(this).index()+1;
         $.cookie("mat", cookieVal);
+        console.log('embed cookie= '+cookieVal);
     });
     
     $('.wrap .section2 .more_btn').on('click', function(){
-        $.cookie("mat", 0);
+        $.cookie("mat", null);
     });
 }
