@@ -22,24 +22,103 @@ function tabActive(){
     if ($.cookie('mat') == 1) {
         $(".wrap .tabs li").removeClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").addClass('active');
-        $(".wrap .tabs li:nth-child("+cookVal+")").css({"opacity":"1"});    
+        $(".wrap .tabs li:nth-child("+cookVal+")").css({"opacity":"1"}); 
+        
+        //cnt3 display block
+        $(".wrap .inner_wrap .cnt3").css({"display":"block"});
+        //video display block
+        $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
+
+        if(window.matchMedia("(max-width:415px)").matches){
+            //cnt1 padding top on mobile = 40 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+        }else{
+            //cnt1 padding top on pc = 60 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+        }
+        tab1Append();  
+        
     }else if($.cookie('mat') == 2){
         $(".wrap .tabs li").removeClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").addClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").css({"opacity":"1"});
+        
+        //cnt3 display none
+        $(".wrap .inner_wrap .cnt3").css({"display":"none"});
+        //video display block
+        $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
+        if(window.matchMedia("(max-width:415px)").matches){
+            //cnt1 padding top on mobile = 40 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+        }else{
+            //cnt1 padding top on pc = 60 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+        }
+        tab2Append(); 
+        
     }else if($.cookie('mat') == 3){
         $(".wrap .tabs li").removeClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").addClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").css({"opacity":"1"});
+        
+        //cnt3 display block
+        $(".wrap .inner_wrap .cnt3").css({"display":"block"});
+        //video display block
+        $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
+        if(window.matchMedia("(max-width:415px)").matches){
+            //cnt1 padding top on mobile = 40 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+        }else{
+            //cnt1 padding top on pc = 60 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+        }
+        tab3Append();  
+        
     }else if($.cookie('mat') == 4){
         $(".wrap .tabs li").removeClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").addClass('active');
         $(".wrap .tabs li:nth-child("+cookVal+")").css({"opacity":"1"});
+        
+        //cnt3 display block
+        $(".wrap .inner_wrap .cnt3").css({"display":"block"});
+        //video display none
+        $(".wrap .inner_wrap .mat_vid").css({"display":"none"});
+        if(window.matchMedia("(max-width:415px)").matches){
+            //cnt1 padding top on mobile = 0 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"0px"});
+        }else{
+            //cnt1 padding top on pc = 20 due to video display block
+            $(".wrap .inner_wrap .cnt1").css({"padding-top":"20px"});
+        }
+        tab4Append();  
+        
     }else{
         //on page load
         $(".wrap .tabs li:nth-child(1)").addClass('active');
         $(".wrap .tabs li:nth-child(1)").css({"opacity":"1"});    
     }
+    
+    //material logo : tab 1,2,3
+    $(".wrap .inner_wrap .mat_logo li").css({"display":"none"});
+    $(".wrap .inner_wrap .mat_logo li:nth-child("+cookVal+")").css({"display":"block"});
+
+    //material banners : tab 1,2,3
+    $(".wrap .inner_wrap .mat_banner").css({"background-image":"url(../img/material/mat_banner"+cookVal+".png)"});
+
+    //material content images : tab 1,2,3
+    $(".wrap .inner_wrap .cnt1 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt1.png)"});
+    $(".wrap .inner_wrap .cnt2 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt2.png)"});
+    $(".wrap .inner_wrap .cnt3 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt3.png)"});
+    
+    cntReset();
+    
+    
+    
+    
+    
+    
+    
+    
     
     $(".wrap .tabs li").on('click', function(){
         //get index
@@ -86,7 +165,6 @@ function tabActive(){
                 //cnt1 padding top on pc = 60 due to video display block
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
             }
-
             tab1Append();    
         }else if(i==2){
             //cnt3 display none
