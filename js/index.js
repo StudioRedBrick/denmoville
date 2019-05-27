@@ -95,7 +95,7 @@ function bxSlider(){
             $('.custom-pager').text(newIndex + 1 + ' / ' + $('.slider > li:not(.bx-clone)').length);
         },
         onSliderLoad: function (){
-            $('.bx-controls-direction').show();
+            $('.bx-controls-direction').hide();
             $('.bx-wrapper').hover(
                 function () { $('.bx-controls-direction').fadeIn(200); },
                 function () { $('.bx-controls-direction').fadeOut(200); }

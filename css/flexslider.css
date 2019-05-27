@@ -255,7 +255,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: rgba(255, 0, 0, 1);
+  background: rgba(255, 255, 255, 1);
 }
 .flex-control-paging li a.flex-active {
   background: #000;
@@ -305,10 +305,10 @@ html[xmlns] .flexslider .slides {
 }
 @media screen and (max-width:415px){
     .flex-control-nav {width:87.5%; margin-left:-43.25%;}
-    .flex-control-nav li {width:33.3333%;}
+    .flex-control-nav li {width:100%;}
     .flex-control-paging li a{width:100%;}
-    .flex-control-nav li:nth-child(2){margin-left:-16.6666%;}
-    .flex-control-nav li:nth-child(3){margin-left:-33.3333%;}
+    .flex-control-nav li:nth-child(2){margin-left:0%; left:0;}
+    .flex-control-nav li:nth-child(3){margin-left:0%; left:0;}
 }
 @media screen and (min-width:1441px){
     .flex-viewport{height:900px;}

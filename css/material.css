@@ -41,6 +41,7 @@
 /*even content box*/
 .wrap .inner_wrap .cnt_even .img{float:right;}
 .wrap .inner_wrap .cnt_even li{float:left;}
+.wrap .inner_wrap .cnt2{padding-bottom:33px;}
 .wrap .inner_wrap .cnt3{padding-bottom:33px;}
 .wrap .inner_wrap .mat_cnt:after{content:""; display:block; clear:both;}/*clearfix*/
 

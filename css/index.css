@@ -16,7 +16,7 @@
 
 /*banner text*/
 .flexslider .txt_wrap{width:567px; position:absolute; left:50%; top:387px; margin-left:-283.5px; z-index:3;}
-.flexslider .txt_wrap .imgs{width:100%;}
+.flexslider .txt_wrap img{width:100%;}
 .flexslider .txt_wrap p{width:100%; text-align:center; font-size:24px; color:#fff; font-family: 'Noto Sans KR', sans-serif; line-height:24px; padding-top:20px; opacity:0.8;}
 
 /*banner animation*/
@@ -120,6 +120,9 @@
     .flexslider .slides .image_wrap1 div{background-position:40% 0;}
     .flexslider .slides .image_wrap2 div{background-position:35% 0;}
     .flexslider .slides .image_wrap3 div{background-position:25% 0;}
+    
+    /*banner text*/
+    .flexslider .txt_wrap{width:545px; top:324px; margin-left:-272.5px;}
 
     /*section1:Den Mobili*/
     .wrap .section1 ul li:nth-child(1) img{margin-top:143px;}
@@ -148,6 +151,9 @@
     .flexslider .slides .image_wrap1 div{background-position:48% 0;}
     .flexslider .slides .image_wrap2 div{background-position:17% 0;}
     .flexslider .slides .image_wrap3 div{background-position:48% 0;}
+    
+    /*banner text*/
+    .flexslider .txt_wrap{width:500px; top:324px; margin-left:-250px;}
 
     /*sections*/
     .notosans{font-size:20px;}
@@ -194,6 +200,10 @@
     .flexslider .slides .image_wrap1 div{background-position:25% 0;}
     .flexslider .slides .image_wrap2 div{background-position:40% 0;}
     .flexslider .slides .image_wrap3 div{background-position:40% 0;}
+    
+    /*banner text*/
+    .flexslider .txt_wrap{width:240px; top:300px; margin-left:-120px;}
+    .flexslider .txt_wrap p{font-size:16px; line-height:16px; padding-top:10px;}
 
     /*sections*/
     .notosans{font-size:16px;}
