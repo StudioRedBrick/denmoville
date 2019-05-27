@@ -17,7 +17,7 @@ function vidTitleOnLoad(){
 function tabActive(){
     
     var cookVal = $.cookie("mat");
-    console.log(result);
+    console.log(cookVal);
     
     if ($.cookie('mat') == 1) {
         $(".wrap .tabs li").removeClass('active');
