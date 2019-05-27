@@ -122,7 +122,11 @@ function matHover(){
         $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"90px"},300);
         //detail button position change
         $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"60px","opacity":"0"},300);
-    });    
+    }); 
+    
+    $(".wrap .section2 ul li").on('click',function(){
+        $(location).attr('href','http://34.85.120.42/material.html'); 
+    });
 }
 
 function mediaMatch(){
