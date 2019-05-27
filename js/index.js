@@ -136,4 +136,8 @@ function embedCookie(){
         var cookieVal = $(this).index()+1;
         $.cookie("mat", cookieVal);
     });
+    
+    $('.wrap .section2 .more_btn').on('click', function(){
+        $.cookie("mat", 0);
+    });
 }
