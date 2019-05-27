@@ -2,6 +2,7 @@ $(document).ready(function(){
     tabActive();
     video();
     vidTitleOnLoad();
+    checkCookie();
 }); //document ready END 
 
 function vidTitleOnLoad(){
@@ -265,4 +266,10 @@ function vidTop(){
         console.log('tabler');
         $(".video_wrap .blanket .inner_wrap .close_btn").css({"top":-value+30});          
     }
+}
+
+function checkCookie(){
+    var result = $.cookie("mat");
+    console.log(result);
+    
 }

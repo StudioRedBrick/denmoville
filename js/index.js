@@ -4,6 +4,7 @@ $(document).ready(function(){
     bxSlider();
     mediaMatch();
     matAddClass();
+    embedCookie();
 }); //document ready END 
 
 function moreBtn(){
@@ -99,14 +100,6 @@ function bxSlider(){
     });
 }
 
-function matAddClass(){
-    $(".wrap .section2 ul li").on('click',function(){
-        $(".wrap .section2 ul li").removeClass("checkIndex");
-        $(this).addClass("checkIndex");
-        $(location).attr('href','http://34.85.120.42/material.html'); 
-    });
-}
-
 function matHover(){
     $(".wrap .section2 ul li").on('mouseenter', function(){
         var i = $(this).index()+1;
@@ -137,4 +130,11 @@ function mediaMatch(){
         matHover();
         moreBtn();
     }
+}
+
+function embedCookie(){
+    $('.wrap .section2 ul li').on('click',function(){
+        var cookieVal = $(this).index()+1;
+        $.cookie("mat", cookieVal);
+    });
 }
