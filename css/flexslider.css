@@ -304,6 +304,7 @@ html[xmlns] .flexslider .slides {
     .flex-control-nav {width:708px; margin-left:-354px;}
 }
 @media screen and (max-width:415px){
+    .flexslider{height:100vh;}
     .flex-control-nav {width:87.5%; margin-left:-43.25%;}
     .flex-control-nav li {width:100%;}
     .flex-control-paging li a{width:100%;}
