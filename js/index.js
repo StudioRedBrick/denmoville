@@ -3,6 +3,7 @@ $(document).ready(function(){
     customPager();
     bxSlider();
     mediaMatch();
+    matAddClass();
 }); //document ready END 
 
 function moreBtn(){
@@ -95,6 +96,13 @@ function bxSlider(){
                 function () { $('.bx-controls-direction').fadeOut(200); }
             );
         }
+    });
+}
+
+function matAddClass(){
+    $(".wrap .section2 ul li").on('click',function(){
+        $(".wrap .section2 ul li").removeClass("checkIndex");
+        $(this).addClass("checkIndex");
     });
 }
 
