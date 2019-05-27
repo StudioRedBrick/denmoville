@@ -16,6 +16,8 @@ function vidTitleOnLoad(){
 
 function tabActive(){
     
+    landingMat();
+    
     $(".wrap .tabs li").on('click', function(){
         //get index
         var i = $(this).index()+1;
