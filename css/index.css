@@ -119,12 +119,12 @@
 
     /*insert banner img*/
     .flexslider .slides li div{height:768px;}
-    .flexslider .slides .image_wrap1 div{background-position:40% 0;}
-    .flexslider .slides .image_wrap2 div{background-position:35% 0;}
-    .flexslider .slides .image_wrap3 div{background-position:25% 0;}
-    
+    .flexslider .slides .image_wrap1 div.imgs{background-position:30% 0%;}
+    .flexslider .slides .image_wrap2 div.imgs{background-position:35% 0;}
+    .flexslider .slides .image_wrap3 div.imgs{background-position:25% 0;}
+
     /*banner text*/
-    .flexslider .txt_wrap{width:545px; top:324px; margin-left:-272.5px;}
+    .flexslider .txt_wrap{width:545px; top:384px; margin-left:-272.5px;}
 
     /*section1:Den Mobili*/
     .wrap .section1 ul li:nth-child(1) img{margin-top:143px;}
@@ -150,9 +150,9 @@
 
     /*insert banner img*/
     .flexslider .slides li div{height:100vh;}
-    .flexslider .slides .image_wrap1 div{background-position:48% 0;}
-    .flexslider .slides .image_wrap2 div{background-position:17% 0;}
-    .flexslider .slides .image_wrap3 div{background-position:48% 0;}
+    .flexslider .slides .image_wrap1 div.imgs{background-position:48% 0;}
+    .flexslider .slides .image_wrap2 div.imgs{background-position:17% 0;}
+    .flexslider .slides .image_wrap3 div.imgs{background-position:48% 0;}
     
     /*banner text*/
     .flexslider .txt_wrap{width:500px; top:400px; margin-left:-250px;}
@@ -199,9 +199,11 @@
     .flexslider .banner_title li{width:100%; display:none;}
 
     /*insert banner img*/
-    .flexslider .slides .image_wrap1 div{background-position:25% 0;}
-    .flexslider .slides .image_wrap2 div{background-position:40% 0;}
-    .flexslider .slides .image_wrap3 div{background-position:40% 0;}
+    .flexslider .slides .image_wrap1 div.imgs{background-image:url(../img/banner1_m.png); background-position:70% -160px;}
+
+    .flexslider .slides .image_wrap2 div.imgs{background-image:url(../img/banner2_m.png); background-position:50% -130px;}
+
+    .flexslider .slides .image_wrap3 div.imgs{background-image:url(../img/banner3_m.png); background-position:50% -180px;}
     
     /*banner text*/
     .flexslider .txt_wrap{width:240px; top:288px; margin-left:-120px;}
