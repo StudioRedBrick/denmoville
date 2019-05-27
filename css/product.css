@@ -73,6 +73,7 @@
     .wrap .filter_wrap .inner_wrap .filter li{font-size:16px; line-height:16px; padding:14px 0 14px 14px;}
 
     /*ribbon*/
+    .ribbon{background-image:url(../img/ribbon_1_m.png); background-position:center;}
     .ribbon ul{width:87.5%;}
     .ribbon ul li{float:none;}
     .ribbon ul li:nth-child(2){float:none; margin-top:10px;}

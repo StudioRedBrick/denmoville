@@ -4,6 +4,7 @@ $(document).ready(function(){
     bxSlider();
     mediaMatch();
     embedCookie();
+    //matLocation();
     
     //reset cookie
     $.cookie("mat", null);
@@ -51,16 +52,35 @@ function checkBanner(){
             $(".flexslider .slides .image_wrap1 div").css({"animation":"bannerAni 8s ease forwards"});
 
             $(".flex-control-nav li:nth-child(1) a").css({"animation":"progressBar 5s forwards"});
+            
+            if(window.matchMedia("(max-width:415px)").matches){
+                $(".flex-control-nav li").css({"display":"none"});
+                $(".flex-control-nav li:nth-child(1)").css({"display":"block"});
+                $(".flex-control-nav li:nth-child(1) a").css({"animation":"progressBar 5s forwards"});
+            }
+            
         }else if( value == 2){
             $(".flexslider .slides .image_wrap3 div").css({"animation":"none"});
             $(".flexslider .slides .image_wrap2 div").css({"animation":"bannerAni2 8s ease forwards"});
 
             $(".flex-control-nav li:nth-child(2) a").css({"animation":"progressBar 5s forwards"});
+            
+            if(window.matchMedia("(max-width:415px)").matches){
+                $(".flex-control-nav li").css({"display":"none"});
+                $(".flex-control-nav li:nth-child(2)").css({"display":"block"});
+                $(".flex-control-nav li:nth-child(2) a").css({"animation":"progressBar 5s forwards"});
+            }
         }else if( value == 3){
             $(".flexslider .slides .image_wrap1 div").css({"animation":"none"});
             $(".flexslider .slides .image_wrap3 div").css({"animation":"bannerAni 8s ease forwards"});
 
             $(".flex-control-nav li:nth-child(3) a").css({"animation":"progressBar 5s forwards"});
+            
+            if(window.matchMedia("(max-width:415px)").matches){
+                $(".flex-control-nav li").css({"display":"none"});
+                $(".flex-control-nav li:nth-child(3)").css({"display":"block"});
+                $(".flex-control-nav li:nth-child(3) a").css({"animation":"progressBar 5s forwards"});
+            }
         }else{
             $(".flexslider .slides .image_wraps div").css({"animation":"none"}); 
 
@@ -133,7 +153,9 @@ function matHover(){
         //detail button position change
         $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"60px","opacity":"0"},300);
     }); 
-    
+}
+
+function matLocation(){
     $(".wrap .section2 ul li").on('click',function(){
         $(location).attr('href','http://34.85.120.42/material.html'); 
     });

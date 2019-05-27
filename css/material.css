@@ -2,7 +2,7 @@
 
 /*tabs*/
 .wrap .tabs{width:720px; margin:0 auto;}
-.wrap .tabs li{float:left; width:25%; text-align:center; padding:22px 0; cursor:pointer; opacity:0.7; font-family: 'Noto Sans KR', sans-serif; font-size:24px;}
+.wrap .tabs li{float:left; width:25%; text-align:center; padding:22px 0; cursor:pointer; opacity:0.5; font-family: 'Noto Sans KR', sans-serif; font-size:24px;}
 .active{border-bottom:2px solid rgba(50,50,50,1);}
 .wrap .tabs:after{content:""; display:block; clear:both;}/*clearfix*/
 
@@ -125,7 +125,12 @@
 @media screen and (max-width:415px){
     /*tabs*/
     .wrap .tabs{padding-top:20px;}
-    .wrap .tabs li{width:49.2%; padding:12px 0; font-size:16px; border:1px solid #969696;}
+    .wrap .tabs li{width:49.4%; padding:12px 0; font-size:16px;}
+    
+    .wrap .tabs li:nth-child(1){border:1px solid #969696;}
+    .wrap .tabs li:nth-child(2){border:1px solid #969696; border-left:none;}
+    .wrap .tabs li:nth-child(3){border:1px solid #969696; border-top:none;}
+    .wrap .tabs li:nth-child(4){border:1px solid #969696; border-top:none; border-left:none;}
     
     /*material logo*/
     .wrap .inner_wrap .mat_logo{width:250px; height:125px; margin:40px auto 20px auto;}
@@ -156,6 +161,7 @@
     .wrap .inner_wrap .cnt3{padding-bottom:0px;}
     
     /*ribbon*/
+    .ribbon{background-image:url(../img/ribbon_2_m.png); background-position:center;}
     .ribbon p{padding:75px 0 30px 0;}
     .ribbon ul{width:87.5%;}
     

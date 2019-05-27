@@ -92,9 +92,8 @@
     .wrap .section2 .map_wrap{padding:30px 0 0px 0;}
     .wrap .section2 .map2{margin-top:30px;}
     
-    
-
     /*ribbon*/
+    .ribbon{background-image:url(../img/ribbon_3_m.png); background-position:center;}
     .ribbon ul{width:87.5%;}
     .ribbon ul li{float:none;}
     .ribbon ul li:nth-child(2){float:none; margin-top:10px;}
