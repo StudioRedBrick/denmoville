@@ -16,6 +16,20 @@ function vidTitleOnLoad(){
 
 function tabActive(){
     
+    //material logo : tab 1,2,3
+    $(".wrap .inner_wrap .mat_logo li").css({"display":"none"});
+    $(".wrap .inner_wrap .mat_logo li:nth-child("+cookVal+")").css({"display":"block"});
+
+    //material banners : tab 1,2,3
+    $(".wrap .inner_wrap .mat_banner").css({"background-image":"url(../img/material/mat_banner"+cookVal+".png)"});
+
+    //material content images : tab 1,2,3
+    $(".wrap .inner_wrap .cnt1 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt1.png)"});
+    $(".wrap .inner_wrap .cnt2 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt2.png)"});
+    $(".wrap .inner_wrap .cnt3 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt3.png)"});
+    
+    cntReset();
+    
     var cookVal = $.cookie("mat");
     console.log(cookVal);
     
@@ -97,27 +111,6 @@ function tabActive(){
         $(".wrap .tabs li:nth-child(1)").addClass('active');
         $(".wrap .tabs li:nth-child(1)").css({"opacity":"1"});    
     }
-    
-    //material logo : tab 1,2,3
-    $(".wrap .inner_wrap .mat_logo li").css({"display":"none"});
-    $(".wrap .inner_wrap .mat_logo li:nth-child("+cookVal+")").css({"display":"block"});
-
-    //material banners : tab 1,2,3
-    $(".wrap .inner_wrap .mat_banner").css({"background-image":"url(../img/material/mat_banner"+cookVal+".png)"});
-
-    //material content images : tab 1,2,3
-    $(".wrap .inner_wrap .cnt1 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt1.png)"});
-    $(".wrap .inner_wrap .cnt2 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt2.png)"});
-    $(".wrap .inner_wrap .cnt3 .img").css({"background-image":"url(../img/material/tab"+cookVal+"/cnt3.png)"});
-    
-    cntReset();
-    
-    
-    
-    
-    
-    
-    
     
     
     $(".wrap .tabs li").on('click', function(){
@@ -235,7 +228,6 @@ function tab1Append(){
         $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
     }else{
     }
-    
     
     //cnt1
     $(".wrap .inner_wrap .cnt1 li .title").append('SAFE FRONT®는 진드기, 곰팡이, 박테리아 프로텍션입니다.');
