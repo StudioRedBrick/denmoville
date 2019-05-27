@@ -106,6 +106,11 @@ function bxSlider(){
             slider.startAuto();
         }
     });
+    
+    $(".wrap .section3 .slider li").on('click',function(){
+        slider.stopAuto();
+        slider.startAuto();    
+    });
 }
 
 function matHover(){
