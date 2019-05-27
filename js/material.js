@@ -18,7 +18,7 @@ function tabActive(){
     
     //check for checkIndex class in landing page
     var checks = $(".wrap .section2 ul li").hasClass('checkIndex');
-    console.log(checks);
+    console.log('check hasClass'+checks);
     
     $(".wrap .tabs li").on('click', function(){
         //get index
