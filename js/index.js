@@ -106,7 +106,7 @@ function matHover(){
         //logo position change
         $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"125px"},300);
         //detail button position change
-        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"70px","opacity":"1"},300);
+        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"80px","opacity":"1"},300);
     });
 
     $(".wrap .section2 ul li").on('mouseleave', function(){
@@ -114,9 +114,9 @@ function matHover(){
         //this change opacity
         $(this).animate({"opacity":"0.9"},300);
         //logo position change
-        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"80px"},300);
+        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"90px"},300);
         //detail button position change
-        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"50px","opacity":"0"},300);
+        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"60px","opacity":"0"},300);
     });    
 }
 

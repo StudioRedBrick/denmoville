@@ -16,15 +16,16 @@ function vidTitleOnLoad(){
 
 function tabActive(){
     
-    $(".wrap .tabs li:nth-child(1)").addClass('active');
-    $(".wrap .tabs li:nth-child(1)").css({"opacity":"1"});
-    
     $(".wrap .tabs li").on('click', function(){
-        
         //get index
         var i = $(this).index()+1;
         console.log(i);
         
+        //on page load
+        $(".wrap .tabs li:nth-child("+i+")").addClass('active');
+        $(".wrap .tabs li:nth-child("+i+")").css({"opacity":"1"});
+
+
         if(window.matchMedia("(max-width:415px)").matches){
             //tab active different in mobile
             $(".wrap .tabs li").removeClass('active');
@@ -41,23 +42,23 @@ function tabActive(){
         //material logo : tab 1,2,3
         $(".wrap .inner_wrap .mat_logo li").css({"display":"none"});
         $(".wrap .inner_wrap .mat_logo li:nth-child("+i+")").css({"display":"block"});
-        
+
         //material banners : tab 1,2,3
         $(".wrap .inner_wrap .mat_banner").css({"background-image":"url(../img/material/mat_banner"+i+".png)"});
-        
+
         //material content images : tab 1,2,3
         $(".wrap .inner_wrap .cnt1 .img").css({"background-image":"url(../img/material/tab"+i+"/cnt1.png)"});
         $(".wrap .inner_wrap .cnt2 .img").css({"background-image":"url(../img/material/tab"+i+"/cnt2.png)"});
         $(".wrap .inner_wrap .cnt3 .img").css({"background-image":"url(../img/material/tab"+i+"/cnt3.png)"});
-        
+
         cntReset();
-        
+
         if(i==1){
             //cnt3 display block
             $(".wrap .inner_wrap .cnt3").css({"display":"block"});
             //video display block
             $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
-            
+
             if(window.matchMedia("(max-width:415px)").matches){
                 //cnt1 padding top on mobile = 40 due to video display block
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
@@ -65,7 +66,102 @@ function tabActive(){
                 //cnt1 padding top on pc = 60 due to video display block
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
             }
-            
+
+            tab1Append();    
+        }else if(i==2){
+            //cnt3 display none
+            $(".wrap .inner_wrap .cnt3").css({"display":"none"});
+            //video display block
+            $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 40 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            }else{
+                //cnt1 padding top on pc = 60 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+            }
+            tab2Append();     
+        }else if(i==3){
+            //cnt3 display block
+            $(".wrap .inner_wrap .cnt3").css({"display":"block"});
+            //video display block
+            $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 40 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            }else{
+                //cnt1 padding top on pc = 60 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+            }
+            tab3Append();      
+        }else{
+            //cnt3 display block
+            $(".wrap .inner_wrap .cnt3").css({"display":"block"});
+            //video display none
+            $(".wrap .inner_wrap .mat_vid").css({"display":"none"});
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 0 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"0px"});
+            }else{
+                //cnt1 padding top on pc = 20 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"20px"});
+            }
+            tab4Append();     
+        }   
+    });
+}
+
+function landingMat(){
+    //when material tab click in index page
+    $(".wrap .section2 ul li").on('click', function(){
+        console.log('click');
+        $(location).attr("href", "http://34.85.120.42/material.html");
+        
+        //get index
+        var i = $(this).index()+1;
+        console.log(i);
+
+        if(window.matchMedia("(max-width:415px)").matches){
+            //tab active different in mobile
+            $(".wrap .tabs li").removeClass('active');
+            $(".wrap .tabs li").css({"opacity":"0.7"});
+            $(this).css({"opacity":"1"}); 
+        }else{
+            //tab active on tablet and pc
+            $(".wrap .tabs li").removeClass('active');
+            $(".wrap .tabs li").css({"opacity":"0.7"});
+            $(this).addClass('active');
+            $(this).css({"opacity":"1"});  
+        }
+
+        //material logo : tab 1,2,3
+        $(".wrap .inner_wrap .mat_logo li").css({"display":"none"});
+        $(".wrap .inner_wrap .mat_logo li:nth-child("+i+")").css({"display":"block"});
+
+        //material banners : tab 1,2,3
+        $(".wrap .inner_wrap .mat_banner").css({"background-image":"url(../img/material/mat_banner"+i+".png)"});
+
+        //material content images : tab 1,2,3
+        $(".wrap .inner_wrap .cnt1 .img").css({"background-image":"url(../img/material/tab"+i+"/cnt1.png)"});
+        $(".wrap .inner_wrap .cnt2 .img").css({"background-image":"url(../img/material/tab"+i+"/cnt2.png)"});
+        $(".wrap .inner_wrap .cnt3 .img").css({"background-image":"url(../img/material/tab"+i+"/cnt3.png)"});
+
+        cntReset();
+
+        if(i==1){
+            //cnt3 display block
+            $(".wrap .inner_wrap .cnt3").css({"display":"block"});
+            //video display block
+            $(".wrap .inner_wrap .mat_vid").css({"display":"block"});
+
+            if(window.matchMedia("(max-width:415px)").matches){
+                //cnt1 padding top on mobile = 40 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"40px"});
+            }else{
+                //cnt1 padding top on pc = 60 due to video display block
+                $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
+            }
+
             tab1Append();    
         }else if(i==2){
             //cnt3 display none

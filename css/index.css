@@ -6,13 +6,18 @@
 .flexslider .banner_title:after{content:""; display:block; clear:both;}/*clearfix*/
 
 /*insert banner img*/
-.flexslider .slides li div{width:115%; height:900px; text-indent:-9999px; transform: translateZ(0);}
+.flexslider .slides li div.imgs{width:105%; height:900px; text-indent:-9999px; transform: translateZ(0);}
 
-.flexslider .slides .image_wrap1 div{background-image:url(../img/banner1.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(0%);}
+.flexslider .slides .image_wrap1 div.imgs{background-image:url(../img/banner1.png); background-repeat:no-repeat; background-size:cover; background-position:50% 90%; animation:none; transform:translateX(0%);}
 
-.flexslider .slides .image_wrap2 div{background-image:url(../img/banner2.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(-1%);}
+.flexslider .slides .image_wrap2 div.imgs{background-image:url(../img/banner2.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(-1%);}
 
-.flexslider .slides .image_wrap3 div{background-image:url(../img/banner3.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(-1%);}
+.flexslider .slides .image_wrap3 div.imgs{background-image:url(../img/banner3.png); background-repeat:no-repeat; background-size:cover; background-position:50% 50%; animation:none; transform:translateX(-1%);}
+
+/*banner text*/
+.flexslider .txt_wrap{width:567px; position:absolute; left:50%; top:387px; margin-left:-283.5px; z-index:3;}
+.flexslider .txt_wrap .imgs{width:100%;}
+.flexslider .txt_wrap p{width:100%; text-align:center; font-size:24px; color:#fff; font-family: 'Noto Sans KR', sans-serif; line-height:24px; padding-top:20px; opacity:0.8;}
 
 /*banner animation*/
 @keyframes bannerAni{
@@ -56,7 +61,7 @@
 .wrap .section2 p{text-align:center;}
 .wrap .section2 ul li{float:left; width:23.79%; height:400px; background:rgba(230,230,230,1); margin-right:1.61%; position:relative; background-repeat:no-repeat; background-size:cover; background-position:center; cursor:pointer; opacity:0.9;}
 .wrap .section2 ul li:nth-child(4){margin-right:0%;}
-.wrap .section2 ul li .mat_logo{background-repeat:no-repeat; background-size:contain; background-position:center; position:absolute; left:50%; bottom:80px;}
+.wrap .section2 ul li .mat_logo{background-repeat:no-repeat; background-size:contain; background-position:center; position:absolute; left:50%; bottom:90px;}
 /*section2 insert img*/
 .wrap .section2 ul li:nth-child(1){background-image:url(../img/landing/mat1_bg.png); background-repeat:no-repeat; background-size:cover; background-position:center;}
 .wrap .section2 ul li:nth-child(1) .mat_logo{width:178px; height:118px; background-image:url(../img/landing/mat1_logo.png); margin-left:-89px;}
