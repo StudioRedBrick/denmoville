@@ -3,7 +3,6 @@ $(document).ready(function(){
     customPager();
     bxSlider();
     mediaMatch();
-    matAddClass();
     embedCookie();
 }); //document ready END 
 
