@@ -103,6 +103,7 @@ function matAddClass(){
     $(".wrap .section2 ul li").on('click',function(){
         $(".wrap .section2 ul li").removeClass("checkIndex");
         $(this).addClass("checkIndex");
+        $(location).attr('href','http://34.85.120.42/material.html'); 
     });
 }
 
