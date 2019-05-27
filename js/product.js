@@ -2,6 +2,10 @@ $(document).ready(function(){
     insertImg();
     filter();
     loadProduct();
+    
+    //reset cookie
+    $.cookie("mat", null);
+    
 }); //document ready END 
 
 function insertImg(){

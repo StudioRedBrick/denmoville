@@ -4,6 +4,10 @@ $(document).ready(function(){
     bxSlider();
     mediaMatch();
     embedCookie();
+    
+    //reset cookie
+    $.cookie("mat", null);
+    
 }); //document ready END 
 
 function moreBtn(){

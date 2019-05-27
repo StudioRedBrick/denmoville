@@ -2,6 +2,7 @@ $(document).ready(function(){
     gnbCss();
     subBannerLoad();
     ribbonHover();
+
 }); //document ready END 
 
 function gnbCss(){
@@ -107,5 +108,4 @@ function ribbonHover(){
             $(this).children('a').stop().animate({"color":"rgba(255,255,255,1)"},200);   
         }); 
     }
-    
 }
