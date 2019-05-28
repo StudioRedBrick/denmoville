@@ -225,19 +225,20 @@
     .wrap .section .more_btn a{font-size:16px; line-height:16px; padding:18px 0 16px 0;}
     /*detail section*/
     /*section1:Den Mobili*/
-    .wrap .section1 ul li{height:140px;}
+    .wrap .section1 ul li{height:160px;}
     .wrap .section1 ul li:nth-child(1){width:93.92%; position:relative; z-index:2;}
     .wrap .section1 ul li:nth-child(2){float:right; width:93.92%; margin-top:-30px; position:relative; z-index:0;}
-    .wrap .section1 ul li:nth-child(1) img{margin-top:55px;}
+    .wrap .section1 ul li:nth-child(1) img{margin-top:65px;}
     
     /*section2:Material*/
-    .wrap .section2 ul li{float:none; width:100%; height:140px; margin-right:0%; margin-bottom:10px;}
+    .wrap .section2 ul li{float:none; width:100%; height:160px; margin-right:0%; margin-bottom:10px;}
+    .wrap .section2 ul li a{height:160px;}
     .wrap .section2 ul li:nth-child(4){margin-bottom:0;}
     /*section2 insert img : logo*/
-    .wrap .section2 ul li:nth-child(1) .mat_logo{width:124px; height:82px; margin-left:-62px; bottom:28px;}
-    .wrap .section2 ul li:nth-child(2) .mat_logo{width:138px; height:36px; margin-left:-69px; bottom:53px;}
-    .wrap .section2 ul li:nth-child(3) .mat_logo{width:154px; height:46px; margin-left:-77px; bottom:47px;}
-    .wrap .section2 ul li:nth-child(4) .mat_logo{width:101px; height:40px; margin-left:-50.5px; bottom:48px;}
+    .wrap .section2 ul li:nth-child(1) .mat_logo{width:124px; height:82px; margin-left:-62px; bottom:35px;}
+    .wrap .section2 ul li:nth-child(2) .mat_logo{width:138px; height:36px; margin-left:-69px; bottom:63px;}
+    .wrap .section2 ul li:nth-child(3) .mat_logo{width:154px; height:46px; margin-left:-77px; bottom:57px;}
+    .wrap .section2 ul li:nth-child(4) .mat_logo{width:101px; height:40px; margin-left:-50.5px; bottom:58px;}
     /*section2 insert img : bg*/
     .wrap .section2 ul li:nth-child(1){background-image:url(../img/landing/mat1_bg_m.png);}
     .wrap .section2 ul li:nth-child(2){background-image:url(../img/landing/mat2_bg_m.png);}
