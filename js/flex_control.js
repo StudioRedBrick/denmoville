@@ -14,6 +14,8 @@ $(document).ready(function(){
         controlNav:true,
         directionNav:false,
         touch:true,
-        useCss:true
+        useCss:true,
+        pauseOnHover:false,
+        pauseOnFocus:false
     });
 }); //document ready END 
