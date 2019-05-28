@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
     
-    $('.flexslider').flexslider({
+    var $flexslider = $('.flexslider').flexslider({
         animation: "fade",
         animationLoop: true,
         slideshow:true,
@@ -16,6 +16,13 @@ $(document).ready(function(){
         touch:false,
         useCss:true,
         pauseOnHover:false,
-        pauseOnFocus:false
+        pauseOnFocus:false,
+        pauseOnAction:true,
+        after: function($flexslider){
+            /* auto-restart player if paused after action */
+            if (!$flexslider.playing) {
+              $flexslider.play();
+            }    
+        }
     });
 }); //document ready END 
