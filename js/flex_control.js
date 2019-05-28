@@ -13,7 +13,7 @@ $(document).ready(function(){
         slideshowSpeed:5000,
         controlNav:true,
         directionNav:false,
-        touch:true,
+        touch:false,
         useCss:true,
         pauseOnHover:false,
         pauseOnFocus:false
