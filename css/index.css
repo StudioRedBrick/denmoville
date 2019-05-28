@@ -30,9 +30,14 @@
     100%{transform:translate(-1%);}
 }
 
-@keyframes bannerAni3{
-    0%{transform:translate(-3%);}
-    100%{transform:translate(-2%);}
+@keyframes bannerAni_m{
+    0%{transform:translate(-4%);}
+    100%{transform:translate(0%);}
+}
+
+@keyframes bannerAni2_m{
+    0%{transform:translate(0%);}
+    100%{transform:translate(-3%);}
 }
 
 @keyframes progressBar{

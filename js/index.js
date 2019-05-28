@@ -57,6 +57,7 @@ function checkBanner(){
                 $(".flex-control-nav li").css({"display":"none"});
                 $(".flex-control-nav li:nth-child(1)").css({"display":"block"});
                 $(".flex-control-nav li:nth-child(1) a").css({"animation":"progressBar 5s forwards"});
+                $(".flexslider .slides .image_wrap1 div").css({"animation":"bannerAni_m 8s ease forwards"});
             }
             
         }else if( value == 2){
@@ -69,6 +70,7 @@ function checkBanner(){
                 $(".flex-control-nav li").css({"display":"none"});
                 $(".flex-control-nav li:nth-child(2)").css({"display":"block"});
                 $(".flex-control-nav li:nth-child(2) a").css({"animation":"progressBar 5s forwards"});
+                $(".flexslider .slides .image_wrap2 div").css({"animation":"bannerAni2_m 8s ease forwards"});
             }
         }else if( value == 3){
             $(".flexslider .slides .image_wrap1 div").css({"animation":"none"});
@@ -80,6 +82,7 @@ function checkBanner(){
                 $(".flex-control-nav li").css({"display":"none"});
                 $(".flex-control-nav li:nth-child(3)").css({"display":"block"});
                 $(".flex-control-nav li:nth-child(3) a").css({"animation":"progressBar 5s forwards"});
+                $(".flexslider .slides .image_wrap3 div").css({"animation":"bannerAni_m 8s ease forwards"});
             }
         }else{
             $(".flexslider .slides .image_wraps div").css({"animation":"none"}); 

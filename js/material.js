@@ -1,18 +1,7 @@
 $(document).ready(function(){ 
     tabActive();
     video();
-    vidTitleOnLoad();
 }); //document ready END 
-
-function vidTitleOnLoad(){
-    //video
-    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-01.png');
-    //video text width for mobile
-    if (window.matchMedia("(max-width:768px)").matches){
-        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
-    }else{
-    }
-}
 
 function tabActive(){
     
@@ -59,8 +48,8 @@ function tabActive(){
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
         }
-        
-        tab1Append();  
+        tab1Append(); 
+        vidTitleAquaClean();
         
     }else if($.cookie('mat') == 2){
         $(".wrap .tabs li").removeClass('active');
@@ -101,6 +90,7 @@ function tabActive(){
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"33px"});
         }
         tab2Append(); 
+        vidTitleSunbrella();
         
     }else if($.cookie('mat') == 3){
         $(".wrap .tabs li").removeClass('active');
@@ -139,7 +129,8 @@ function tabActive(){
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
         }
-        tab3Append();  
+        tab3Append();
+        vidTitleSmart();
         
     }else if($.cookie('mat') == 4){
         $(".wrap .tabs li").removeClass('active');
@@ -178,7 +169,7 @@ function tabActive(){
             $(".wrap .inner_wrap .cnt1").css({"padding-top":"20px"});
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
         }
-        tab4Append();  
+        tab4Append();
         
     }else{
         
@@ -213,6 +204,7 @@ function tabActive(){
             $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
         }
         tab1Append(); 
+        vidTitleAquaClean();
     }
 
     $(".wrap .tabs li").on('click', function(){
@@ -224,7 +216,7 @@ function tabActive(){
         //console.log(i);
 
         if(window.matchMedia("(max-width:415px)").matches){
-            //tab active different in mobile
+            //tab active css different in mobile - borders change
             $(".wrap .tabs li").removeClass('active');
             $(".wrap .tabs li").css({"opacity":"0.5"});
             $(this).css({"opacity":"1","border":"1px solid #969696"});
@@ -284,7 +276,9 @@ function tabActive(){
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
                 $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
             }
-            tab1Append();    
+            tab1Append(); 
+            vidTitleAquaClean();
+            
         }else if(i==2){
             //cnt3 display none
             $(".wrap .inner_wrap .cnt3").css({"display":"none"});
@@ -299,7 +293,9 @@ function tabActive(){
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
                 $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"33px"});
             }
-            tab2Append();     
+            tab2Append();
+            vidTitleSunbrella();
+            
         }else if(i==3){
             //cnt3 display block
             $(".wrap .inner_wrap .cnt3").css({"display":"block"});
@@ -314,7 +310,9 @@ function tabActive(){
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"60px"});
                 $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
             }
-            tab3Append();      
+            tab3Append();
+            vidTitleSmart();
+            
         }else{
             //cnt3 display block
             $(".wrap .inner_wrap .cnt3").css({"display":"block"});
@@ -329,7 +327,7 @@ function tabActive(){
                 $(".wrap .inner_wrap .cnt1").css({"padding-top":"20px"});
                 $(".wrap .inner_wrap .cnt2").css({"padding-bottom":"0px"});
             }
-            tab4Append();     
+            tab4Append();
         }   
     });
 }
@@ -341,7 +339,7 @@ function cntReset(){
     $(".wrap .inner_wrap .mat_abt li .info").empty();
     $(".wrap .inner_wrap .mat_cnt li .title").empty();
     $(".wrap .inner_wrap .mat_cnt li .cnt_txt").empty();
-    $(".wrap .inner_wrap .mat_vid p a").empty();
+    $(".wrap .inner_wrap .mat_vid ul li:nth-child(1)").empty();
 }
 
 function tab1Append(){
@@ -354,12 +352,7 @@ function tab1Append(){
     $(".wrap .inner_wrap .mat_abt li:nth-child(2) .info").append('아쿠아클린 기술은 향상된 패브릭 보호 기술입니다. 이 공정을 통해 섬유 한올한올에 보이지 않는 분자 수준의 코팅을 하여 이물질이 섬유에 침투하는 것을 방지합니다.');
 
     //video
-    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-01.png');
-    //video text width for mobile
-    if (window.matchMedia("(max-width:768px)").matches){
-        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
-    }else{
-    }
+    $(".wrap .inner_wrap .mat_vid ul li:nth-child(1)").append("'아쿠아클린'");
     
     //cnt1
     $(".wrap .inner_wrap .cnt1 li .title").append('SAFE FRONT®는 진드기, 곰팡이, 박테리아 프로텍션입니다.');
@@ -384,12 +377,7 @@ function tab2Append(){
     $(".wrap .inner_wrap .mat_abt li:nth-child(2) .info").append('내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다.');
 
     //video
-    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-02.png');
-    //video text width for mobile
-    if (window.matchMedia("(max-width:768px)").matches){
-        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
-    }else{
-    }
+    $(".wrap .inner_wrap .mat_vid ul li:nth-child(1)").append("'선브렐라'");
     
     //cnt1
     $(".wrap .inner_wrap .cnt1 li .title").append('아이의 건강을 위한 패브릭');
@@ -410,12 +398,7 @@ function tab3Append(){
     $(".wrap .inner_wrap .mat_abt li:nth-child(2) .info").append('내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다. 내용이 노출됩니다.');
 
     //video
-    $(".wrap .inner_wrap .mat_vid img").attr('src','./img/material/vid_title-03.png');
-    //video text width for mobile
-    if (window.matchMedia("(max-width:768px)").matches){
-        $(".wrap .inner_wrap .mat_vid img").css({"transform":"scale(0.8)"});
-    }else{
-    }
+    $(".wrap .inner_wrap .mat_vid ul li:nth-child(1)").append("'라이브스마트'");
     
     //cnt1
     $(".wrap .inner_wrap .cnt1 li .title").append('S4계절 내내 한결같은 원단');
@@ -485,8 +468,55 @@ function vidTop(){
     }
 }
 
+function vidTitleAquaClean(){
+    if (window.matchMedia("(min-width:769px) and (max-width:1024px)").matches){
+        //Tablet 가로
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"230px"});
+    }else if(window.matchMedia("(min-width:416px) and (max-width:768px)").matches){
+        //Tablet 세로
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"190px"});
+    }else if(window.matchMedia("(max-width:415px)").matches){
+        //Mobile 
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"185px"});
+    }else{
+        //PC
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"230px"});
+    }
+}
+
+function vidTitleSunbrella(){
+    if (window.matchMedia("(min-width:769px) and (max-width:1024px)").matches){
+        //Tablet 가로
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"210px"});
+    }else if(window.matchMedia("(min-width:416px) and (max-width:768px)").matches){
+        //Tablet 세로
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"175px"});
+    }else if(window.matchMedia("(max-width:415px)").matches){
+        //Mobile   
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"168px"});
+    }else{
+        //PC
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"210px"});
+    }
+}
+
+function vidTitleSmart(){
+    if (window.matchMedia("(min-width:769px) and (max-width:1024px)").matches){
+        //Tablet 가로
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"250px"});
+    }else if(window.matchMedia("(min-width:416px) and (max-width:768px)").matches){
+        //Tablet 세로
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"207px"});
+    }else if(window.matchMedia("(max-width:415px)").matches){
+        //Mobile   
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"200px"});
+    }else{
+        //PC
+        $(".wrap .inner_wrap .mat_vid ul").css({"width":"247px"});
+    }
+}
+
 function checkCookie(){
     var result = $.cookie("mat");
     //console.log(result);
-    
 }
