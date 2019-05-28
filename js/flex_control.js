@@ -13,5 +13,6 @@ $(document).ready(function(){
         slideshowSpeed:5000,
         controlNav:true,
         directionNav:false,
+        touch:true
     });
 }); //document ready END 
