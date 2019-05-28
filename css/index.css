@@ -17,7 +17,7 @@
 /*banner text*/
 .flexslider .txt_wrap{width:567px; position:absolute; left:50%; top:387px; margin-left:-283.5px; z-index:3;}
 .flexslider .txt_wrap img{width:100%;}
-.flexslider .txt_wrap p{width:100%; text-align:center; font-size:24px; color:#fff; font-family: 'Noto Sans KR', sans-serif; line-height:24px; padding-top:20px; opacity:0.8;}
+.flexslider .txt_wrap p{width:100%; text-align:center; font-size:24px; color:#fff; font-family: 'Noto Sans KR', sans-serif; line-height:24px; padding-top:20px;}
 
 /*banner animation*/
 @keyframes bannerAni{
