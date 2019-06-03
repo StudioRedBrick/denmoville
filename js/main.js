@@ -70,17 +70,17 @@ function getUrl(){
         img3 = './img/sub_banner3.png';
     
     //'http://34.85.120.42/product.html'
-    if(url == 'http://34.85.120.42/product.html'){
+    if(url == 'http://denmobili.com/product.html'){
         console.log('product page');
         $(".sub_banner").css({"background-image":"url("+img1+")","background-position":"center"});
         $(".sub_banner .txt p").append('Product');
         $(".sub_banner .txt span").append('높은 품질의 재료를 사용하는것, 덴모빌리');
-    }else if(url == 'http://34.85.120.42/material.html'){
+    }else if(url == 'http://denmobili.com/material.html'){
         console.log('material page');
         $(".sub_banner").css({"background-image":"url("+img2+")","background-position":"center"});
         $(".sub_banner .txt p").append('Material');
         $(".sub_banner .txt span").append('높은 품질의 재료를 사용하는것, 덴모빌리');    
-    }else if(url == 'http://34.85.120.42/about.html'){
+    }else if(url == 'http://denmobili.com/about.html'){
         console.log('about page');
         $(".sub_banner").css({"background-image":"url("+img3+")","background-position":"center"});
         $(".sub_banner .txt p").append('About');
