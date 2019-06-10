@@ -174,9 +174,25 @@ function matHover(){
         //this change opacity
         $(this).animate({"opacity":"1"},300);
         //logo position change
-        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"125px"},300);
+        
+        //$(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"125px"},300);
+        
         //detail button position change
-        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"80px","opacity":"1"},300);
+        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"60px","opacity":"1"},300);
+        
+        if(i == 1){
+            //1 aquaclean logo
+            $(".wrap .section2 ul li:nth-child(1) .mat_logo").stop().animate({"bottom":"135px"},300);
+        }else if(i == 2){
+            //2 sunbrella logo
+            $(".wrap .section2 ul li:nth-child(2) .mat_logo").stop().animate({"bottom":"178px"},300); 
+        }else if(i == 3){
+            //3 livesmart logo
+            $(".wrap .section2 ul li:nth-child(3) .mat_logo").stop().animate({"bottom":"167px"},300);
+        }else{
+            //4 leather logo
+            $(".wrap .section2 ul li:nth-child(4) .mat_logo").stop().animate({"bottom":"160px"},300);    
+        }
     });
 
     $(".wrap .section2 ul li").on('mouseleave', function(){
@@ -184,9 +200,24 @@ function matHover(){
         //this change opacity
         $(this).animate({"opacity":"0.9"},300);
         //logo position change
-        $(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"90px"},300);
+        //$(".wrap .section2 ul li:nth-child("+i+") .mat_logo").stop().animate({"bottom":"90px"},300);
+        
         //detail button position change
-        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"60px","opacity":"0"},300);
+        $(".wrap .section2 ul li:nth-child("+i+") .detail").stop().animate({"bottom":"40px","opacity":"0"},300);
+        
+        if(i == 1){
+            //1 aquaclean logo
+            $(".wrap .section2 ul li:nth-child(1) .mat_logo").stop().animate({"bottom":"90px"},300);
+        }else if(i == 2){
+            //2 sunbrella logo
+            $(".wrap .section2 ul li:nth-child(2) .mat_logo").stop().animate({"bottom":"133px"},300);    
+        }else if( i == 3){
+            //3 livesmart logo
+            $(".wrap .section2 ul li:nth-child(3) .mat_logo").stop().animate({"bottom":"122px"},300);         
+        }else{
+            //4 leather logo
+            $(".wrap .section2 ul li:nth-child(4) .mat_logo").stop().animate({"bottom":"110px"},300);         
+        }
     }); 
 }
 

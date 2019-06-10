@@ -25,6 +25,10 @@ function openDetail(){
         fileExt1=".png";
     
     $(".wrap .section3 ul li").on('click',function(){
+        //html, body overflow:hidden
+        $("html").css({"overflow":"hidden"});
+        $("body").css({"overflow":"hidden"});
+        
         $(".detail_wrap").fadeToggle(100);
         $(".wrap").css({"display":"none"});
         
@@ -130,6 +134,10 @@ function openDetail(){
 
 function closeDetail(){
     $(".detail_wrap .fix .inner_wrap .close_btn").on('click',function(){
+        //html, body overflow:auto
+        $("html").css({"overflow":"auto"});
+        $("body").css({"overflow":"auto"});
+        
         $(".detail_wrap").fadeToggle(100);
         $(".wrap").css({"display":"block"});
         

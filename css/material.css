@@ -3,7 +3,7 @@
 /*tabs*/
 .wrap .tabs{width:720px; margin:0 auto;}
 .wrap .tabs li{float:left; width:25%; text-align:center; padding:22px 0; cursor:pointer; opacity:0.5; font-family: 'Noto Sans KR', sans-serif; font-size:24px;}
-.active{border-bottom:2px solid rgba(50,50,50,1);}
+.active{border-bottom:2px solid rgba(50,50,50,1); font-weight:bold;}
 .wrap .tabs:after{content:""; display:block; clear:both;}/*clearfix*/
 
 /*material logo*/

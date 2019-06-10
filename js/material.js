@@ -222,18 +222,26 @@ function tabActive(){
             $(this).css({"opacity":"1","border":"1px solid #969696"});
             
             if(i == 1){
+                $(".wrap .tabs li:nth-child(1)").css({"font-weight":"bold"});
+                
                 $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696","border-left":"none"});
                 $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696","border-top":"none"});
                 $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696","border-top":"none","border-left":"none"});   
             }else if(i == 2){
+                $(".wrap .tabs li:nth-child(2)").css({"font-weight":"bold"});
+                
                 $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696","border-right":"none"});
                 $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696","border-top":"none"});
                 $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696","border-top":"none","border-left":"none"});
             }else if(i == 3){
+                $(".wrap .tabs li:nth-child(3)").css({"font-weight":"bold"});
+                
                 $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696","border-bottom":"none"});
                 $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696","border-left":"none","border-bottom":"none"});
                 $(".wrap .tabs li:nth-child(4)").css({"border":"1px solid #969696","border-left":"none"});        
             }else{
+                $(".wrap .tabs li:nth-child(4)").css({"font-weight":"bold"});
+                
                 $(".wrap .tabs li:nth-child(1)").css({"border":"1px solid #969696","border-bottom":"none"});
                 $(".wrap .tabs li:nth-child(2)").css({"border":"1px solid #969696","border-left":"none","border-bottom":"none"});
                 $(".wrap .tabs li:nth-child(3)").css({"border":"1px solid #969696","border-right":"none"});     
