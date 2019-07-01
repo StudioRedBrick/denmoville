@@ -9,6 +9,8 @@ $(document).ready(function(){
         ScaleToSinglePage:true,
         HardCover:false,
         CenterSinglePage:true,
+        Margin:0,
+        FullScale:true,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
