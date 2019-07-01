@@ -15,6 +15,7 @@ $(document).ready(function(){
         SinglePageMode:true,
         AutoScale:true,
         CenterSinglePage:true,
+        RightToLeft:true,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
