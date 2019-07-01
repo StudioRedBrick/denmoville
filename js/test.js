@@ -7,7 +7,6 @@ $(document).ready(function(){
         CoverHeight: 640,
         VerticalMode:true,
         ScaleToSinglePage:true,
-        FullScale:true,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
