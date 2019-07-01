@@ -12,10 +12,11 @@ $(document).ready(function(){
         Margin:0,
         FullScale:true,
         AutoMaxHeight:true,
-        SinglePageMode:true,
+        AutoSinglePageMode:true,
         AutoScale:true,
         CenterSinglePage:true,
         RightToLeft:true,
+        StartPage:6,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
