@@ -14,6 +14,7 @@ $(document).ready(function(){
         AutoMaxHeight:true,
         SinglePageMode:true,
         AutoScale:true,
+        CenterSinglePage:true,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
