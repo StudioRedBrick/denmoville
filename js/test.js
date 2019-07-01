@@ -5,6 +5,7 @@ $(document).ready(function(){
         PageHeight: 600,
         CoverWidth: 400,
         CoverHeight: 600,
+        BookOffsetX:100,
         VerticalMode:true,
         ScaleToSinglePage:true,
         HardCover:false,
