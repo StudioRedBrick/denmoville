@@ -11,7 +11,6 @@ $(document).ready(function(){
         CenterSinglePage:true,
         Margin:0,
         FullScale:true,
-        MarginTop:0,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
