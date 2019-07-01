@@ -28,3 +28,4 @@ src: url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&d
     /*---------------------------------------------------------------*/
     body{margin:0; padding:0;}
     
+#pageflip{transform:rotate(180deg);}
