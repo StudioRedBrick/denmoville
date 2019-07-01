@@ -6,7 +6,7 @@ $(document).ready(function(){
         CoverWidth: 400,
         CoverHeight: 600,
         VerticalMode:true,
-        ScaleToSinglePage:true,
+        //ScaleToSinglePage:true,
         HardCover:false,
         CenterSinglePage:true,
         Margin:0,
