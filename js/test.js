@@ -12,6 +12,7 @@ $(document).ready(function(){
         Margin:0,
         FullScale:true,
         AutoMaxHeight:true,
+        SinglePageMode:true,
         //PageDataFile: "demobook.html",
         Copyright: Key.Copyright,
         Key: Key.Key
