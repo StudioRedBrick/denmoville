@@ -1,0 +1,1 @@
+﻿var Key = { Copyright: "copyright all rights reserved", Key: "9vRGWHJsmLBIYL4IfOpmbciR"};
