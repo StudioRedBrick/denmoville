@@ -21,10 +21,4 @@ $(document).ready(function(){
         Copyright: Key.Copyright,
         Key: Key.Key
     });
-    
-    
-    
-    
-
-
 }); //document ready END 
